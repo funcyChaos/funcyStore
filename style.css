@@ -2,10 +2,64 @@
 .nav {
   display: grid;
   grid-template-columns: 1fr 5fr 1fr;
-  grid-template-rows: 100px 30px;
-  grid-template-areas: "icon search account" "nav nav nav";
+  grid-template-rows: 70px 30px;
+  grid-template-areas: "title search account" "nav nav nav";
   background-color: black;
   color: white;
+}
+.nav .title {
+  grid-area: title;
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+  letter-spacing: 1px;
+}
+.nav .title a {
+  color: white;
+  text-decoration: none;
+}
+.nav .search {
+  grid-area: search;
+  display: flex;
+  justify-content: center;
+  margin: 15px;
+}
+.nav .search form {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  background-color: white;
+  color: black;
+  border-radius: 0.5rem;
+}
+.nav .search form .search_dropdown {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 60px;
+  height: 100%;
+  border-right: 2px solid black;
+}
+.nav .search form input {
+  width: 100%;
+  margin-left: 10px;
+  font-size: x-large;
+  background-color: white;
+  border: none;
+  outline: none;
+}
+.nav .search form .search_go {
+  width: 40px;
+  border-radius: 0.5rem;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.nav .search .search_go {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #d9d9d9;
+  height: 100%;
 }
 .nav .nav_links {
   grid-area: nav;

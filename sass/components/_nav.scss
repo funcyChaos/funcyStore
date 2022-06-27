@@ -4,15 +4,94 @@
 
 	display: grid;
 	grid-template-columns: 1fr 5fr 1fr;
-	grid-template-rows: 100px 30px;
+	grid-template-rows: 70px 30px;
 
 	grid-template-areas: 
-		"icon search account"
+		"title search account"
 		"nav nav nav"
 	;
 
-	background-color: black;
-	color: white;
+	background-color: variables.$color2;
+	color: variables.$color1;
+
+	.title{
+
+		grid-area: title;
+
+		display: flex;
+		align-items: center;
+
+		padding-left: 10px;
+		letter-spacing: 1px;
+
+		a{
+
+			color: variables.$color1;
+			text-decoration: none;
+		}
+	}
+
+	.search{
+
+		grid-area: search;
+		display: flex;
+		justify-content: center;
+		margin: 15px;
+
+		
+		form{
+			
+			display: flex;
+			align-items: center;
+			width: 100%;
+			
+			background-color: variables.$color1;
+			color: variables.$color2;
+			
+			$border-radius: .5rem;
+			border-radius: $border-radius;
+			
+			.search_dropdown{
+				
+				display: flex;
+				justify-content: space-around;
+				align-items: center;
+				width: 60px;
+				height: 100%;
+				border-right: 2px solid black;
+			}
+			
+			input{
+				
+				width: 100%;
+				margin-left: 10px;
+				font-size: x-large;
+				background-color: variables.$color1;
+				
+				border: none;
+				outline: none;
+			}
+			
+			.search_go{
+
+				width: 40px;
+
+				border-radius: $border-radius;
+				border-top-left-radius: 0;
+				border-bottom-left-radius: 0;
+			}
+		}
+
+		.search_go{
+
+			display: flex;
+			align-items: center;
+			justify-content: center;
+
+			background-color: variables.$color3;
+			height: 100%;
+		}
+	}
 
 	.nav_links{
 
@@ -23,8 +102,8 @@
 
 		padding: 0 20px;
 
-		background-color: #d9d9d9;
-		color: black;
+		background-color: variables.$color3;
+		color: variables.$color2;
 
 		.categories, .site_nav{
 
@@ -33,9 +112,9 @@
 			flex: 1 0 40vw;
 
 			a{
-				
+
 				padding-right: 15px;
-				color: black;
+				color: variables.$color2;
 				text-decoration: none;
 			}
 			
@@ -48,7 +127,7 @@
 
 		.line{
 
-			background-color: black;
+			background-color: variables.$color2;
 			width: 8px;
 		}
 	}
