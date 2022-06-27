@@ -1,13 +1,43 @@
 @import url("https://fonts.googleapis.com/css2?family=Kotta+One&display=swap");
+.nav {
+  display: grid;
+  grid-template-columns: 1fr 5fr 1fr;
+  grid-template-rows: 100px 30px;
+  grid-template-areas: "icon search account" "nav nav nav";
+  background-color: black;
+  color: white;
+}
+.nav .nav_links {
+  grid-area: nav;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px;
+  background-color: #d9d9d9;
+  color: black;
+}
+.nav .nav_links .categories, .nav .nav_links .site_nav {
+  display: flex;
+  align-items: center;
+  flex: 1 0 40vw;
+}
+.nav .nav_links .categories a, .nav .nav_links .site_nav a {
+  padding-right: 15px;
+  color: black;
+  text-decoration: none;
+}
+.nav .nav_links .categories li, .nav .nav_links .site_nav li {
+  display: inline-block;
+  margin: 0 10px;
+}
+.nav .nav_links .line {
+  background-color: black;
+  width: 8px;
+}
+
 * {
   margin: 0;
   padding: 0;
   font-family: "Kotta One", serif;
-}
-
-body {
-  background-color: black;
-  color: white;
 }
 
 /*# sourceMappingURL=style.css.map */
