@@ -3,7 +3,7 @@
 .nav{
 
 	display: grid;
-	grid-template-columns: 1fr 5fr 1fr;
+	grid-template-columns: 1fr 6fr 2fr;
 	grid-template-rows: 70px 30px;
 
 	grid-template-areas: 
@@ -31,23 +31,24 @@
 		}
 	}
 
-	.search{
+	.nav_search{
 
 		grid-area: search;
 		display: flex;
 		justify-content: center;
-		margin: 15px;
+		align-items: center;
 
 		form{
-			
+
 			display: flex;
 			align-items: center;
-			width: 100%;
+			width: 95%;
+			height: 70%;
 			
 			background-color: variables.$color1;
 			color: variables.$color2;
 			
-			$border-radius: 1rem;
+			$border-radius: .5rem;
 			border-radius: $border-radius;
 
 			/*
@@ -98,10 +99,30 @@
 		}
 	}
 
-	.site_nav{
+	.account_nav{
+
+		grid-area: account;
 
 		display: flex;
-		
+		align-items: center;
+		justify-content: space-around;
+
+		margin-right: 20px;
+
+		h4{
+
+			width: 110px;
+		}
+
+		&>div{
+
+			display: flex;
+		}
+
+		&>*{
+
+			margin: 10px;
+		}
 	}
 
 	.nav_links{

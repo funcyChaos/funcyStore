@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Kotta+One&display=swap");
 .nav {
   display: grid;
-  grid-template-columns: 1fr 5fr 1fr;
+  grid-template-columns: 1fr 6fr 2fr;
   grid-template-rows: 70px 30px;
   grid-template-areas: "title search account" "nav nav nav";
   background-color: black;
@@ -18,34 +18,35 @@
   color: white;
   text-decoration: none;
 }
-.nav .search {
+.nav .nav_search {
   grid-area: search;
   display: flex;
   justify-content: center;
-  margin: 15px;
+  align-items: center;
 }
-.nav .search form {
+.nav .nav_search form {
   display: flex;
   align-items: center;
-  width: 100%;
+  width: 95%;
+  height: 70%;
   background-color: white;
   color: black;
-  border-radius: 1rem;
+  border-radius: 0.5rem;
   /*
   	This is where we make the search components
   */
 }
-.nav .search form .search_dropdown {
+.nav .nav_search form .search_dropdown {
   overflow: hidden;
   height: 100%;
   border: none;
   outline: none;
   padding-left: 5px;
   border-right: 2px solid black;
-  border-top-left-radius: 1rem;
-  border-bottom-left-radius: 1rem;
+  border-top-left-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
 }
-.nav .search form input {
+.nav .nav_search form input {
   width: 100%;
   margin-left: 10px;
   font-size: x-large;
@@ -53,7 +54,7 @@
   border: none;
   outline: none;
 }
-.nav .search form .search_go {
+.nav .nav_search form .search_go {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -62,12 +63,25 @@
   border: none;
   cursor: pointer;
   width: 40px;
-  border-radius: 1rem;
+  border-radius: 0.5rem;
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
 }
-.nav .site_nav {
+.nav .account_nav {
+  grid-area: account;
   display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-right: 20px;
+}
+.nav .account_nav h4 {
+  width: 110px;
+}
+.nav .account_nav > div {
+  display: flex;
+}
+.nav .account_nav > * {
+  margin: 10px;
 }
 .nav .nav_links {
   grid-area: nav;

@@ -3,7 +3,6 @@ const multiplier = 7;
 const adder = 40;
 const firstWidth = Select.value.length * multiplier + adder;
 Select.style.width = `${firstWidth}px`;
-console.log(Select.style.width);
 
 Select.addEventListener('change', ()=>{
 

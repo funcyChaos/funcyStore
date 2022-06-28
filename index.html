@@ -16,8 +16,7 @@
 					<h1>funcyStore</h1>
 				</a>
 			</div>
-			<div class="search">
-				<!-- <input type="text" name="search" id="store_search"> -->
+			<div class="nav_search" id="nav_search_container">
 				<form id="search_bar_form" action="/" method="get">
 					<select class="search_dropdown" name="category" id="category_select">
 						<option value="All">All</option>
@@ -27,31 +26,35 @@
 						<option value="Car Parts">Car Parts</option>
 					</select>
 					<script src="./js/dropdown.js"></script>
-					<!-- <button class="search_dropdown">
-						All
-						<i class="fas fa-caret-down"></i>
-					</button> -->
-					<input type="text" name="search" id="search">
-					<!-- <div class="search_go"><i class="fas fa-search"></i></div> -->
+					<input type="text" name="search" id="nav_search">
 					<button class="search_go"><i class="fas fa-search"></i></button>
 				</form>
+			</div>
+			<script src="./js/search_glow.js"></script>
+			<div class="account_nav">
+				<h3>Sign In</h3>
+				<h4>Orders & Returns</h4>
+				<div>
+					<i class="fas fa-shopping-cart"></i>
+					<h3>&nbspCart</h3>
+				</div>
 			</div>
 			<div class="nav_links">
 				<div class="categories">
 					<a href=""><i class="fas fa-solid fa-bars"> All</i></a>
 					<ul>
-						<li>Keyboards</li>
-						<li>Drones</li>
-						<li>Stash Storage</li>
-						<li>Car Parts</li>
+						<li><a href="">Keyboards</a></li>
+						<li><a href="">Drones</a></li>
+						<li><a href="">Stash Storage</a></li>
+						<li><a href="">Car Parts</a></li>
 					</ul>
 				</div>
 				<div class="line"></div>
 				<div class="site_nav">
 					<ul>
-						<li>Blog</li>
-						<li>About</li>
-						<li>Contact</li>
+						<li><a href="">Blog</a></li>
+						<li><a href="">About</a></li>
+						<li><a href="">Contact</a></li>
 					</ul>
 				</div>
 			</div>
