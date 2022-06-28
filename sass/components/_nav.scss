@@ -1,5 +1,7 @@
 @use "../variables";
 
+// Currently good as small as 1500px
+
 .nav{
 
 	display: grid;
@@ -108,11 +110,6 @@
 		justify-content: space-around;
 
 		margin-right: 20px;
-
-		h4{
-
-			width: 110px;
-		}
 
 		&>a{
 
