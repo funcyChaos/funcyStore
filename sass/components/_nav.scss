@@ -49,17 +49,18 @@
 			
 			$border-radius: 1rem;
 			border-radius: $border-radius;
+
+			/*
+				This is where we make the search components
+			*/
 			
 			.search_dropdown{
-				
-				display: flex;
-				justify-content: space-around;
-				align-items: center;
-				// width: fit-content;
+
 				overflow: hidden;
 				height: 100%;
 				border: none;
 				outline: none;
+				padding-left: 5px;
 				border-right: 2px solid black;
 				border-top-left-radius: $border-radius;
 				border-bottom-left-radius: $border-radius;
@@ -95,6 +96,12 @@
 				border-bottom-left-radius: 0;
 			}
 		}
+	}
+
+	.site_nav{
+
+		display: flex;
+		
 	}
 
 	.nav_links{

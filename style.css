@@ -31,15 +31,16 @@
   background-color: white;
   color: black;
   border-radius: 1rem;
+  /*
+  	This is where we make the search components
+  */
 }
 .nav .search form .search_dropdown {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
   overflow: hidden;
   height: 100%;
   border: none;
   outline: none;
+  padding-left: 5px;
   border-right: 2px solid black;
   border-top-left-radius: 1rem;
   border-bottom-left-radius: 1rem;
@@ -64,6 +65,9 @@
   border-radius: 1rem;
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
+}
+.nav .site_nav {
+  display: flex;
 }
 .nav .nav_links {
   grid-area: nav;
