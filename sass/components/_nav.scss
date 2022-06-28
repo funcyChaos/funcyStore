@@ -1,20 +1,44 @@
 @use "../variables";
 
-// Currently good as small as 1500px
-
 .nav{
 
+	/*
+		Setup baseline grid for most desktops and laptops
+	*/
+
 	display: grid;
-	grid-template-columns: 1fr 6fr 2fr;
-	grid-template-rows: 70px 30px;
+	grid-template-columns: 1fr 4fr 2fr;
+	grid-template-rows: 61px 36px;
 
 	grid-template-areas: 
 		"title search account"
 		"nav nav nav"
 	;
 
+	/*
+		First changes to grid at the large breakpoint
+	*/
+
+	@media(max-width: variables.$large_breakpoint){
+
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: 40px 50px 40px;
+
+		grid-template-areas:
+			"topl topr"
+			"search search"
+			"cats cats"
+		;
+
+		padding: 10px;
+	}
+
 	background-color: variables.$color2;
 	color: variables.$color1;
+
+	/*
+		Title and Logo area
+	*/
 
 	.title{
 
@@ -25,6 +49,12 @@
 
 		padding-left: 10px;
 		letter-spacing: 1px;
+		
+		@media(max-width: variables.$large_breakpoint){
+
+			grid-area: topl;
+			padding: 0;
+		}
 
 		a{
 
@@ -33,9 +63,14 @@
 		}
 	}
 
+	/*
+		Search form in the navbar area
+	*/
+
 	.nav_search{
 
 		grid-area: search;
+
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -46,6 +81,11 @@
 			align-items: center;
 			width: 95%;
 			height: 70%;
+
+			@media(max-width: variables.$large_breakpoint){
+
+				width: 100%;
+			}
 			
 			background-color: variables.$color1;
 			color: variables.$color2;
@@ -92,7 +132,7 @@
 
 				cursor: pointer;
 
-				width: 40px;
+				width: 55px;
 
 				border-radius: $border-radius;
 				border-top-left-radius: 0;
@@ -104,6 +144,11 @@
 	.account_nav{
 
 		grid-area: account;
+
+		@media(max-width: variables.$large_breakpoint){
+
+			grid-area: topr;
+		}
 
 		display: flex;
 		align-items: center;
@@ -128,6 +173,11 @@
 
 		grid-area: nav;
 
+		@media(max-width: variables.$large_breakpoint){
+
+			grid-area: cats;
+		}
+
 		display: flex;
 		justify-content: space-between;
 
@@ -135,20 +185,31 @@
 
 		background-color: variables.$color3;
 		color: variables.$color2;
-
+		
 		.categories, .site_nav{
-
+			
 			display: flex;
 			align-items: center;
 			flex: 1 0 40vw;
-
+			
 			a{
-
+				
 				padding-right: 15px;
 				color: variables.$color2;
 				text-decoration: none;
 			}
 			
+			@media(max-width: variables.$large_breakpoint){
+	
+				background-color: variables.$color2;
+				color: variables.$color1;
+
+				a{
+
+					color: variables.$color1;
+				}
+			}
+
 			li{
 	
 				display: inline-block;
@@ -156,10 +217,20 @@
 			}
 		}
 
+		@media(max-width: variables.$large_breakpoint){
+
+			padding: 0;	
+		}
+
 		.line{
 
 			background-color: variables.$color2;
 			width: 8px;
+
+			@media(max-width: variables.$large_breakpoint){
+
+				background-color: variables.$color1;	
+			}
 		}
 	}
 }
