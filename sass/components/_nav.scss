@@ -38,7 +38,6 @@
 		justify-content: center;
 		margin: 15px;
 
-		
 		form{
 			
 			display: flex;
@@ -48,7 +47,7 @@
 			background-color: variables.$color1;
 			color: variables.$color2;
 			
-			$border-radius: .5rem;
+			$border-radius: 1rem;
 			border-radius: $border-radius;
 			
 			.search_dropdown{
@@ -56,9 +55,14 @@
 				display: flex;
 				justify-content: space-around;
 				align-items: center;
-				width: 60px;
+				// width: fit-content;
+				overflow: hidden;
 				height: 100%;
+				border: none;
+				outline: none;
 				border-right: 2px solid black;
+				border-top-left-radius: $border-radius;
+				border-bottom-left-radius: $border-radius;
 			}
 			
 			input{
@@ -74,22 +78,22 @@
 			
 			.search_go{
 
+				display: flex;
+				align-items: center;
+				justify-content: center;
+
+				background-color: variables.$color3;
+				height: 100%;
+				border: none;
+
+				cursor: pointer;
+
 				width: 40px;
 
 				border-radius: $border-radius;
 				border-top-left-radius: 0;
 				border-bottom-left-radius: 0;
 			}
-		}
-
-		.search_go{
-
-			display: flex;
-			align-items: center;
-			justify-content: center;
-
-			background-color: variables.$color3;
-			height: 100%;
 		}
 	}
 
