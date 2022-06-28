@@ -77,8 +77,10 @@
 .nav .account_nav h4 {
   width: 110px;
 }
-.nav .account_nav > div {
+.nav .account_nav > a {
   display: flex;
+  color: white;
+  text-decoration: none;
 }
 .nav .account_nav > * {
   margin: 10px;

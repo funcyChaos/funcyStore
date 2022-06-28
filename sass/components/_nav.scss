@@ -114,9 +114,11 @@
 			width: 110px;
 		}
 
-		&>div{
+		&>a{
 
 			display: flex;
+			color: variables.$color1;
+			text-decoration: none;
 		}
 
 		&>*{
