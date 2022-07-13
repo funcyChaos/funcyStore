@@ -185,16 +185,39 @@
 
 		background-color: variables.$color3;
 		color: variables.$color2;
+
+		.categories{
+
+			overflow: hidden;
+
+			position: relative;
+
+			.menu-slider{
+
+				display: flex;
+				align-items: center;
+				
+				pointer-events: none;
+				position: absolute;
+				left: 0;
+			}
+
+			a:first-of-type{
+
+				margin-right: 30px;
+			}
+		}
 		
 		.categories, .site_nav{
-			
+
 			display: flex;
 			align-items: center;
 			flex: 1 0 40vw;
 			
 			a{
 				
-				padding-right: 15px;
+				white-space: nowrap;
+				margin-right: 20px;
 				color: variables.$color2;
 				text-decoration: none;
 			}

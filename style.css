@@ -131,13 +131,28 @@
     grid-area: cats;
   }
 }
+.nav .nav_links .categories {
+  overflow: hidden;
+  position: relative;
+}
+.nav .nav_links .categories .menu-slider {
+  display: flex;
+  align-items: center;
+  pointer-events: none;
+  position: absolute;
+  left: 0;
+}
+.nav .nav_links .categories a:first-of-type {
+  margin-right: 30px;
+}
 .nav .nav_links .categories, .nav .nav_links .site_nav {
   display: flex;
   align-items: center;
   flex: 1 0 40vw;
 }
 .nav .nav_links .categories a, .nav .nav_links .site_nav a {
-  padding-right: 15px;
+  white-space: nowrap;
+  margin-right: 20px;
   color: black;
   text-decoration: none;
 }
@@ -178,44 +193,6 @@
   margin: 0;
   padding: 0;
   font-family: "Kotta One", serif;
-}
-
-.card {
-  height: 300px;
-  width: 400px;
-  border-radius: 5px;
-}
-
-.card:nth-child(odd) {
-  background-color: blue;
-}
-
-.card:nth-child(even) {
-  background-color: rgb(0, 183, 255);
-}
-
-.slider-container {
-  width: 200px;
-  height: 100px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  overflow: hidden;
-  background-color: blue;
-}
-
-.inner-slider {
-  width: fit-content;
-  display: flex;
-  gap: 10px;
-  pointer-events: none;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-.inner-slider div {
-  width: 100px;
 }
 
 /*# sourceMappingURL=style.css.map */

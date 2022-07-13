@@ -1,5 +1,8 @@
-let sliderContainer = document.querySelector('.slider-container');
-let innerSlider = document.querySelector('.inner-slider');
+// let sliderContainer = document.querySelector('.slider-container');
+// let innerSlider = document.querySelector('.inner-slider');
+
+let sliderContainer = document.querySelector('.categories');
+let innerSlider = document.querySelector('.menu-slider');
 
 let pressed = false;
 let startX;
@@ -7,6 +10,7 @@ let x;
 
 sliderContainer.addEventListener("mousedown", (e)=>{
 	
+	innerSlider.style.pointerEvents = 'none';
 	pressed = true;
 	startX = e.offsetX - innerSlider.offsetLeft;
 });
@@ -15,6 +19,11 @@ sliderContainer.addEventListener("mouseup", ()=>{
 
 	pressed = false;
 });
+
+sliderContainer.addEventListener('mouseleave', ()=>{
+
+	pressed = false;
+})
 
 sliderContainer.addEventListener("mousemove", (e)=>{
 
