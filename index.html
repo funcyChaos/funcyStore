@@ -19,19 +19,19 @@
 			</div>
 			<div class="nav_search" id="nav_search_container">
 				<form id="search_bar_form" action="/" method="get">
-					<select class="search_dropdown" name="category" id="category_select">
+					<select class="search_dropdown" name="category" id="search_category_select">
 						<option value="All">All</option>
 						<option value="Keyboards">Keyboards</option>
 						<option value="Drones">Drones</option>
 						<option value="Stash Storage">Stash Storage</option>
 						<option value="Car Parts">Car Parts</option>
 					</select>
-					<script src="./js/dropdown.js"></script>
+					<script src="./js/nav/dropdown.js"></script>
 					<input type="text" name="search" id="nav_search">
 					<button class="search_go"><i class="fas fa-search fa-lg"></i></button>
 				</form>
 			</div>
-			<script src="./js/search_glow.js"></script>
+			<script src="./js/nav/search_glow.js"></script>
 			<div class="account_nav">
 				<a href="">
 					<h3>Sign In</h3>
@@ -47,8 +47,7 @@
 			<div class="nav_links">
 				<div class="categories">
 					<div class="menu-slider">
-						<!-- <p>Hi WTFucking Fuck</p> -->
-						<a href=""><i class="fas fa-solid fa-bars"> All</i></a>
+						<a onclick="cats_open(event)" href=""><i class="fas fa-bars"> All</i></a>
 						<a href="">Keyboards</a>
 						<a href="">Drones</a>
 						<a href="">Stash Storage</a>
@@ -67,17 +66,36 @@
 						<a href="">Car Parts</a>
 					</div>
 				</div>
-				<!-- <script src="./js/drag.js"></script> -->
+				<!-- <script src="./js/nav/drag.js"></script> -->
 				<div class="line"></div>
 				<div class="site_nav">
-					<ul>
-						<li><a href="">Blog</a></li>
-						<li><a href="">About</a></li>
-						<li><a href="">Contact</a></li>
-					</ul>
+					<a href="">Blog</a>
+					<a href="">About</a>
+					<a href="">Contact</a>
 				</div>
 			</div>
 		</header>
+		<div class="all-categories" id="all_categories">
+			<a onclick="cats_close(event)" id="all_cats_close" href=""><i class="fas fa-times"></i></a>
+			<a href="">Keyboards</a>
+			<a href="">Drones</a>
+			<a href="">Stash Storage</a>
+			<a href="">Car Parts</a>
+			<a href="">Keyboards</a>
+			<a href="">Drones</a>
+			<a href="">Stash Storage</a>
+			<a href="">Car Parts</a>
+			<a href="">Keyboards</a>
+			<a href="">Drones</a>
+			<a href="">Stash Storage</a>
+			<a href="">Car Parts</a>
+			<a href="">Keyboards</a>
+			<a href="">Drones</a>
+			<a href="">Stash Storage</a>
+			<a href="">Car Parts</a>
+			<script src="./js/nav/all_cats.js"></script>
+		</div>
+		<div class="cats-overlay"></div>
 
 		<script src="https://kit.fontawesome.com/aebdbe8212.js" crossorigin="anonymous"></script>
 	</body>

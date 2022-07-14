@@ -1,4 +1,30 @@
 @import url("https://fonts.googleapis.com/css2?family=Kotta+One&display=swap");
+.all-categories {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -180px;
+  width: 180px;
+  transition: 0.1s;
+  padding: 100px 0;
+  background-color: #d9d9d9;
+}
+.all-categories a {
+  margin: 5px 20px;
+}
+
+.cats-overlay {
+  display: none;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 180px;
+  width: calc(100vw - 180px);
+  background-color: rgba(0, 0, 0, 0.6666666667);
+}
+
 .nav {
   /*
   	Setup baseline grid for most desktops and laptops
@@ -122,7 +148,6 @@
   grid-area: nav;
   display: flex;
   justify-content: space-between;
-  padding: 0 20px;
   background-color: #d9d9d9;
   color: black;
 }
@@ -141,9 +166,6 @@
   position: absolute;
   left: 0;
 }
-.nav .nav_links .categories a:first-of-type {
-  margin-right: 30px;
-}
 .nav .nav_links .categories, .nav .nav_links .site_nav {
   display: flex;
   align-items: center;
@@ -155,6 +177,9 @@
   color: black;
   text-decoration: none;
 }
+.nav .nav_links .categories a:first-of-type, .nav .nav_links .site_nav a:first-of-type {
+  margin-left: 20px;
+}
 @media (max-width: 1200px) {
   .nav .nav_links .categories, .nav .nav_links .site_nav {
     background-color: black;
@@ -163,10 +188,6 @@
   .nav .nav_links .categories a, .nav .nav_links .site_nav a {
     color: white;
   }
-}
-.nav .nav_links .categories li, .nav .nav_links .site_nav li {
-  display: inline-block;
-  margin: 0 10px;
 }
 @media (max-width: 1200px) {
   .nav .nav_links {
