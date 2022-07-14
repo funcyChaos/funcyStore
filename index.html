@@ -13,8 +13,9 @@
 	<body>
 		<header class="nav">
 			<div class="title">
+				<a onclick="cats_open(event)" id="cat_mobi_all" href=""><i class="fas fa-bars"></i></a>
 				<a href="">
-					<h1>funcyStore</h1>
+					<h1 id="main_title">funcyStore</h1>
 				</a>
 			</div>
 			<div class="nav_search" id="nav_search_container">
@@ -34,20 +35,22 @@
 			<script src="./js/nav/search_glow.js"></script>
 			<div class="account_nav">
 				<a href="">
-					<h3>Sign In</h3>
+					<i id="signin_icon" class="fas fa-user fa-lg"></i>
+					<h3 id="signin_words">Sign In</h3>
 				</a>
 				<a href="">
-					<h4>Orders & Returns</h4>
+					<i id="orders_icon" class="fas fa-book fa-lg"></i>
+					<h4 id="orders_words">Orders & Returns</h4>
 				</a>
 				<a href="">
 					<i class="fas fa-shopping-cart fa-lg"></i>
-					<h3>&nbspCart</h3>
+					<h3 id="cart_word">&nbspCart</h3>
 				</a>
 			</div>
 			<div class="nav_links">
 				<div class="categories">
 					<div class="menu-slider">
-						<a onclick="cats_open(event)" href=""><i class="fas fa-bars"> All</i></a>
+						<a onclick="cats_open(event)" id="cat_bar_all" href=""><i class="fas fa-bars"> All</i></a>
 						<a href="">Keyboards</a>
 						<a href="">Drones</a>
 						<a href="">Stash Storage</a>
