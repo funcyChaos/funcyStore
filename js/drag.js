@@ -1,21 +1,28 @@
-// let sliderContainer = document.querySelector('.slider-container');
-// let innerSlider = document.querySelector('.inner-slider');
-
 let sliderContainer = document.querySelector('.categories');
 let innerSlider = document.querySelector('.menu-slider');
 
 let pressed = false;
 let startX;
 let x;
+let downTime;
 
 sliderContainer.addEventListener("mousedown", (e)=>{
 	
-	innerSlider.style.pointerEvents = 'none';
+	downTime = new Date().getTime();	
 	pressed = true;
 	startX = e.offsetX - innerSlider.offsetLeft;
 });
 
 sliderContainer.addEventListener("mouseup", ()=>{
+
+	const upTime = new Date().getTime();
+	const diff = upTime - downTime;
+	
+	if(diff < 400){
+
+		console.log(document.querySelectorAll(':hover'));
+		console.log(diff);
+	}
 
 	pressed = false;
 });

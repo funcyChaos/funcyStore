@@ -138,7 +138,6 @@
 .nav .nav_links .categories .menu-slider {
   display: flex;
   align-items: center;
-  pointer-events: none;
   position: absolute;
   left: 0;
 }
