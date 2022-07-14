@@ -2,10 +2,15 @@
 
 $width: 180px;
 
+@mixin aTagDefaults{
+	
+	color: variables.$primary;
+	text-decoration: none;
+}
+
 .all-categories{
 
 	display: flex;
-	// display: none;
 	flex-direction: column;
 
 	position: absolute;
@@ -17,27 +22,36 @@ $width: 180px;
 
 	padding: 100px 0;
 
-	background-color: variables.$color3;
+	background-color: variables.$secondary;
 
 	a{
 
-		margin: 5px 20px;
+		margin: 5px 40px;
+		@include aTagDefaults();
+
+		&:first-of-type{
+
+			position: absolute;
+
+			right: 0;
+			top: 0;
+
+			margin: 30px 20px;
+		}
 	}
 
 }
 
 .cats-overlay{
 
-	display: none;
 	position: absolute;
 	top: 0;
 	bottom: 0;
-	left: $width;
-	// right: calc(100vw - $width);
-	width: calc(100vw - $width);
+	left: -100%;
+	width: 100%;
+	transition: .1s;
 
-	// width: 100vw;
-	background-color: #000a;
+	background-color: variables.$aux2;
 }
 
 .nav{
@@ -73,8 +87,8 @@ $width: 180px;
 		padding: 10px;
 	}
 
-	background-color: variables.$color2;
-	color: variables.$color1;
+	background-color: variables.$primary;
+	color: variables.$aux1;
 
 	/*
 		Title and Logo area
@@ -98,7 +112,7 @@ $width: 180px;
 
 		a{
 
-			color: variables.$color1;
+			color: variables.$aux1;
 			text-decoration: none;
 		}
 	}
@@ -127,8 +141,8 @@ $width: 180px;
 				width: 100%;
 			}
 			
-			background-color: variables.$color1;
-			color: variables.$color2;
+			background-color: variables.$aux1;
+			color: variables.$primary;
 			
 			$border-radius: .5rem;
 			border-radius: $border-radius;
@@ -154,7 +168,7 @@ $width: 180px;
 				width: 100%;
 				margin-left: 10px;
 				font-size: x-large;
-				background-color: variables.$color1;
+				background-color: variables.$aux1;
 				
 				border: none;
 				outline: none;
@@ -166,7 +180,7 @@ $width: 180px;
 				align-items: center;
 				justify-content: center;
 
-				background-color: variables.$color3;
+				background-color: variables.$secondary;
 				height: 100%;
 				border: none;
 
@@ -199,7 +213,7 @@ $width: 180px;
 		&>a{
 
 			display: flex;
-			color: variables.$color1;
+			color: variables.$aux1;
 			text-decoration: none;
 		}
 
@@ -221,8 +235,8 @@ $width: 180px;
 		display: flex;
 		justify-content: space-between;
 
-		background-color: variables.$color3;
-		color: variables.$color2;
+		background-color: variables.$secondary;
+		color: variables.$primary;
 
 		.categories{
 
@@ -251,7 +265,7 @@ $width: 180px;
 				
 				white-space: nowrap;
 				margin-right: 20px;
-				color: variables.$color2;
+				color: variables.$primary;
 				text-decoration: none;
 
 				&:first-of-type{
@@ -262,12 +276,12 @@ $width: 180px;
 			
 			@media(max-width: variables.$large_breakpoint){
 	
-				background-color: variables.$color2;
-				color: variables.$color1;
+				background-color: variables.$primary;
+				color: variables.$aux1;
 
 				a{
 
-					color: variables.$color1;
+					color: variables.$aux1;
 				}
 			}
 
@@ -285,12 +299,12 @@ $width: 180px;
 
 		.line{
 
-			background-color: variables.$color2;
+			background-color: variables.$primary;
 			width: 8px;
 
 			@media(max-width: variables.$large_breakpoint){
 
-				background-color: variables.$color1;	
+				background-color: variables.$aux1;	
 			}
 		}
 	}
