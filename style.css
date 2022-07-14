@@ -42,7 +42,7 @@
   grid-template-rows: 61px 36px;
   grid-template-areas: "title search account" "nav nav nav";
   /*
-  	First changes to grid at the large breakpoint
+  	Main changes to grid at the large breakpoint
   */
   background-color: black;
   color: white;
@@ -50,7 +50,25 @@
   	Title and Logo area
   */
   /*
+  	end Title and Logo area
+  */
+  /*
   	Search form in the navbar area
+  */
+  /*
+  	end Search form in the navbar area
+  */
+  /*
+  	Account navigation, account, orders, cart
+  */
+  /*
+  	end Account navigation
+  */
+  /*
+  	Site navigation, categories and general (blog, about, contact)
+  */
+  /*
+  	end Site navigation
   */
 }
 @media (max-width: 1200px) {

@@ -8,6 +8,9 @@ $width: 180px;
 	text-decoration: none;
 }
 
+// *******************************
+// all-categories overlay
+
 .all-categories{
 
 	display: flex;
@@ -54,6 +57,9 @@ $width: 180px;
 	background-color: variables.$aux2;
 }
 
+// end all-categories overlay
+// *******************************
+
 .nav{
 
 	/*
@@ -70,7 +76,7 @@ $width: 180px;
 	;
 
 	/*
-		First changes to grid at the large breakpoint
+		Main changes to grid at the large breakpoint
 	*/
 
 	@media(max-width: variables.$large_breakpoint){
@@ -90,6 +96,7 @@ $width: 180px;
 	background-color: variables.$primary;
 	color: variables.$aux1;
 
+	// *******************************
 	/*
 		Title and Logo area
 	*/
@@ -135,6 +142,12 @@ $width: 180px;
 		}
 	}
 
+	/*
+		end Title and Logo area
+	*/
+	// *******************************
+
+	// *******************************
 	/*
 		Search form in the navbar area
 	*/
@@ -218,6 +231,16 @@ $width: 180px;
 		}
 	}
 
+	/*
+		end Search form in the navbar area
+	*/
+	// *******************************
+
+	// *******************************
+	/*
+		Account navigation, account, orders, cart
+	*/
+
 	.account_nav{
 
 		grid-area: account;
@@ -261,6 +284,16 @@ $width: 180px;
 			}
 		}
 	}
+
+	/*
+		end Account navigation
+	*/
+	// *******************************
+
+	// *******************************
+	/*
+		Site navigation, categories and general (blog, about, contact)
+	*/
 
 	.nav_links{
 
@@ -376,4 +409,9 @@ $width: 180px;
 			}
 		}
 	}
+
+	/*
+		end Site navigation
+	*/
+	// *******************************
 }
