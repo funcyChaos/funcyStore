@@ -11,7 +11,9 @@ function cats_open(e){
 
 function cats_close(e){
 
-	e.preventDefault();
+	if(e)e.preventDefault();
 	allCats.style.left = '-200px';
 	catsOver.style.left = '-100%';
 }
+
+catsOver.addEventListener('click',()=>cats_close());
