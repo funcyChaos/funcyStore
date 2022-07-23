@@ -232,14 +232,10 @@
   }
 }
 .nav .nav_links .categories {
-  overflow: hidden;
-  position: relative;
+  overflow-x: scroll;
 }
-.nav .nav_links .categories .menu-slider {
-  display: flex;
-  align-items: center;
-  position: absolute;
-  left: 0;
+.nav .nav_links .categories::-webkit-scrollbar {
+  display: none;
 }
 @media (max-width: 1200px) {
   .nav .nav_links .categories #cat_bar_all {
@@ -247,11 +243,6 @@
   }
 }
 @media (max-width: 600px) {
-  .nav .nav_links .categories {
-    display: none;
-  }
-}
-@media (max-width: 1200px) {
   .nav .nav_links .site_nav {
     justify-content: flex-end;
     flex: 1 1;
@@ -260,9 +251,9 @@
     margin-right: 10px;
   }
 }
-@media (max-width: 1200px) and (max-width: 600px) {
+@media (max-width: 600px) and (max-width: 600px) {
   .nav .nav_links .site_nav {
-    justify-content: center;
+    display: none;
   }
 }
 .nav .nav_links .line {

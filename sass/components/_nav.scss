@@ -344,18 +344,11 @@ $width: 180px;
 
 		.categories{
 
-			overflow: hidden;
+			overflow-x: scroll;
 
-			position: relative;
+			&::-webkit-scrollbar{
 
-			.menu-slider{
-
-				display: flex;
-				align-items: center;
-				
-				// pointer-events: none;
-				position: absolute;
-				left: 0;
+				display: none;
 			}
 
 
@@ -369,11 +362,11 @@ $width: 180px;
 
 			@media(max-width: variables.$small_breakpoint){
 
-				display: none;
+				// display: none;
 			}
 		}
 		
-		@media(max-width: variables.$large_breakpoint){
+		@media(max-width: variables.$small_breakpoint){
 
 			.site_nav{
 	
@@ -388,7 +381,7 @@ $width: 180px;
 
 				@media(max-width: variables.$small_breakpoint){
 
-					justify-content: center;
+					display: none;
 				}
 			}
 		}
@@ -406,6 +399,7 @@ $width: 180px;
 			@media(max-width: variables.$small_breakpoint){
 
 				display: none;
+
 			}
 		}
 	}
