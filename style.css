@@ -233,6 +233,7 @@
 }
 .nav .nav_links .categories {
   overflow-x: scroll;
+  scrollbar-width: none;
 }
 .nav .nav_links .categories::-webkit-scrollbar {
   display: none;

@@ -345,6 +345,7 @@ $width: 180px;
 		.categories{
 
 			overflow-x: scroll;
+			scrollbar-width: none;
 
 			&::-webkit-scrollbar{
 
