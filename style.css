@@ -273,9 +273,51 @@
   }
 }
 
-.marketplace_hero {
-  height: 600px;
+.home-product-hero {
+  height: 80vh;
   background: linear-gradient(180deg, #000000 33.85%, rgba(0, 0, 0, 0) 91.15%);
+}
+.home-product-hero .col-2 {
+  width: 22%;
+}
+.home-product-hero .leading-ad {
+  height: 200px;
+  color: white;
+}
+.home-product-hero .leading-ad .ad {
+  width: 60%;
+  height: 100px;
+  height: 100%;
+  background-color: #d9d9d9;
+  margin-left: 30px;
+}
+.home-product-hero a {
+  color: black;
+  text-decoration: none;
+}
+.home-product-hero .product-hero-card {
+  height: 250px;
+  background-color: white;
+}
+.home-product-hero .product-hero-card .product-image {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  height: 200px;
+  background-color: #d9d9d9;
+}
+.home-product-hero .service-card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px 0;
+  background-color: none;
+}
+.home-product-hero .service-card .service {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  background-color: #d9d9d9;
 }
 
 * {

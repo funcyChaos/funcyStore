@@ -1,7 +1,69 @@
 @use "../variables";
 
-.marketplace_hero{
+.home-product-hero{
 
-	height: 600px;
+	height: 80vh;
 	background: linear-gradient(180deg, #000000 33.85%, rgba(0, 0, 0, 0) 91.15%);
+
+	.col-2{
+
+		width: 22%;
+	}
+
+	.leading-ad{
+
+		height: 200px;
+		color: variables.$aux1;
+
+		.ad{
+
+			width: 60%;
+			height: 100px;
+			height: 100%;
+			background-color: variables.$secondary;
+
+			margin-left: 30px;
+		}
+	}
+
+	a{
+
+		color: variables.$primary;
+		text-decoration: none;
+	}
+
+	.product-hero-card{
+
+		height: 250px;
+		background-color: variables.$aux1;
+
+		.product-image{
+
+			width: 100%;
+			margin-left: auto;
+			margin-right: auto;
+			height: 200px;
+
+			background-color: variables.$secondary;
+		}
+
+	}
+	
+	.service-card{
+
+		display: flex;
+		flex-direction: column;
+		gap: 10px 0;
+		background-color: none;
+
+		.service{
+			
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			
+			height: 100%;
+			background-color: variables.$secondary;
+		}
+	}
 }
