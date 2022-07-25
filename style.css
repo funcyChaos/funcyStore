@@ -317,6 +317,9 @@
   width: 800px;
   height: 100%;
 }
+.home-product-hero .hero-carousel .carousel-inner .item-1 {
+  z-index: 1;
+}
 .home-product-hero .col-2 {
   width: 22%;
 }
