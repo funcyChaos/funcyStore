@@ -312,9 +312,10 @@ $width: 180px;
 
 		.categories, .site_nav{
 
-			// display: flex;
+			display: flex;
 			align-items: center;
 			flex: 1 0 40vw;
+			width: 40vw;
 			
 			a{
 				
@@ -344,12 +345,8 @@ $width: 180px;
 
 		.categories{
 
-			// display: flex;
-			min-height: 0;
-
 			overflow-x: scroll;
 			scrollbar-width: none;
-			// overflow: hidden;
 
 			&::-webkit-scrollbar{
 

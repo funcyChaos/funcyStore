@@ -209,8 +209,10 @@
   }
 }
 .nav .nav_links .categories, .nav .nav_links .site_nav {
+  display: flex;
   align-items: center;
   flex: 1 0 40vw;
+  width: 40vw;
 }
 .nav .nav_links .categories a, .nav .nav_links .site_nav a {
   white-space: nowrap;
@@ -231,7 +233,6 @@
   }
 }
 .nav .nav_links .categories {
-  min-height: 0;
   overflow-x: scroll;
   scrollbar-width: none;
 }
