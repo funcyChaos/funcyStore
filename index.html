@@ -97,15 +97,20 @@
 		<script src="./js/nav/all_cats.js"></script>
 
 		<div class="container home-product-hero">
-			<a href="" class="row leading-ad mx-2 py-4">
-				<div class="deal d-flex justify-content-around">
-					<div class="sale">
-						<h2>15% Off</h2>
-						<h3>from $249.99</h3>
-					</div>
-					<div class="ad"></div>
+			
+			<div class="hero-carousel">
+				<div id="prod_car_left" class="car-left"><i class="fas fa-angle-left"></i></div>
+				<div class="carousel-inner">
+					<div class="car-item"></div>
+					<div class="car-item" style="background-color: red;"></div>
+					<div class="car-item" style="background-color: yellow;"></div>
+					<div class="car-item" style="background-color: green;"></div>
+					<div class="car-item" style="background-color: orange;"></div>
 				</div>
-			</a>
+				<div id="prod_car_right" class="car-right"><i class="fas fa-angle-right"></i></div>
+			</div>
+			<script src="./js/market-home/carousel.js"></script>
+
 			<div class="row mt-3 justify-content-evenly product-cards">
 				<a href="" class="col-2 product-hero-card py-2">
 					<h3>Ultimate Stash Storage</h3>
