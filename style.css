@@ -3,6 +3,7 @@
   display: flex;
   flex-direction: column;
   position: absolute;
+  z-index: 10;
   top: 0;
   bottom: 0;
   left: -180px;
@@ -25,6 +26,7 @@
 
 .cats-overlay {
   position: absolute;
+  z-index: 10;
   top: 0;
   bottom: 0;
   left: -100%;
@@ -301,7 +303,19 @@
   height: 100%;
   position: absolute;
   transition: all 0.5s;
-  background-color: blue;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.home-product-hero .hero-carousel .carousel-inner .car-item .car-title {
+  align-self: flex-start;
+  margin-top: 30px;
+  color: white;
+}
+.home-product-hero .hero-carousel .carousel-inner .car-item .car-img {
+  background-color: #d9d9d9;
+  width: 800px;
+  height: 100%;
 }
 .home-product-hero .col-2 {
   width: 22%;

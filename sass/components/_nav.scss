@@ -17,6 +17,7 @@ $width: 180px;
 	flex-direction: column;
 
 	position: absolute;
+	z-index: 10;
 	top: 0;
 	bottom: 0;
 	left: -$width;
@@ -48,6 +49,7 @@ $width: 180px;
 .cats-overlay{
 
 	position: absolute;
+	z-index: 10;
 	top: 0;
 	bottom: 0;
 	left: -100%;

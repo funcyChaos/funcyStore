@@ -9,7 +9,7 @@ carItems.forEach((item, index)=>{
 	item.style.transform = `translateX(${index * 100}%)`;
 });
 
-left.addEventListener('click', ()=>{
+right.addEventListener('click', ()=>{
 
 	if(current === totalItems){current = 0;}else{current++;}
 
@@ -19,7 +19,7 @@ left.addEventListener('click', ()=>{
 	})
 });
 
-right.addEventListener('click', ()=>{
+left.addEventListener('click', ()=>{
 
 	if(current === 0){current = totalItems;}else{current--;}
 
