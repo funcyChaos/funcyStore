@@ -61,49 +61,52 @@
 		}
 	}
 
-	.col-2{
+	.product-cards{
 
-		width: 22%;
+		display: flex;
+		justify-content: space-evenly;
+
+		margin-top: 20px;
+
+		.product-hero-card,.service-card{
+
+			flex: 0 1 22%;
+			// max-width: 22%;
+			aspect-ratio: 1 / 1;
+			padding-top: 10px;
+
+			background-color: variables.$aux1;
+
+			h3{margin-left: 10px;}
+
+			.product-image{
+
+				width: 90%;
+				aspect-ratio: 1 / 1;
+				margin: 10px auto;
+
+				background-color: variables.$secondary;
+			}
+		}
+
+		.service-card{
+
+			display: flex;
+			flex-direction: column;
+			justify-content: space-around;
+			align-items: center;
+
+			.service{
+
+				background-color: variables.$secondary;
+				padding: 35px;
+			}
+		}
 	}
 
 	a{
 
 		color: variables.$primary;
 		text-decoration: none;
-	}
-
-	.product-hero-card{
-
-		height: 250px;
-		background-color: variables.$aux1;
-
-		.product-image{
-
-			width: 100%;
-			margin-left: auto;
-			margin-right: auto;
-			height: 200px;
-
-			background-color: variables.$secondary;
-		}
-
-	}
-	
-	.service-card{
-
-		display: flex;
-		flex-direction: column;
-		gap: 10px 0;
-		background-color: none;
-
-		.service{
-			
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			
-			height: 100%;
-			background-color: variables.$secondary;
-		}
 	}
 }
