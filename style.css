@@ -387,6 +387,7 @@
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
+  background-color: initial;
 }
 .home-product-hero .product-cards .service-card .service {
   width: 80%;
