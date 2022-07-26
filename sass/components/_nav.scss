@@ -64,9 +64,7 @@ $width: 180px;
 
 .nav{
 
-	/*
-		Setup baseline grid for most desktops and laptops
-	*/
+	// Setup baseline grid for most desktops and laptops
 
 	display: grid;
 	grid-template-columns: 1fr 4fr 2fr;
@@ -77,9 +75,7 @@ $width: 180px;
 		"nav nav nav"
 	;
 
-	/*
-		Main changes to grid at the large breakpoint
-	*/
+	// Main changes to grid at the large breakpoint
 
 	@media(max-width: variables.$large_breakpoint){
 
@@ -99,9 +95,7 @@ $width: 180px;
 	color: variables.$aux1;
 
 	// *******************************
-	/*
-		Title and Logo area
-	*/
+	// Title and Logo area
 
 	.title{
 
@@ -144,15 +138,11 @@ $width: 180px;
 		}
 	}
 
-	/*
-		end Title and Logo area
-	*/
+	// end Title and Logo area
 	// *******************************
 
 	// *******************************
-	/*
-		Search form in the navbar area
-	*/
+	// Search form in the navbar area
 
 	.nav_search{
 
@@ -180,9 +170,7 @@ $width: 180px;
 			$border-radius: .5rem;
 			border-radius: $border-radius;
 
-			/*
-				This is where we make the search components
-			*/
+			// This is where we make the search components
 			
 			.search_dropdown{
 
@@ -233,15 +221,11 @@ $width: 180px;
 		}
 	}
 
-	/*
-		end Search form in the navbar area
-	*/
+	// end Search form in the navbar area
 	// *******************************
 
 	// *******************************
-	/*
-		Account navigation, account, orders, cart
-	*/
+	// Account navigation, account, orders, cart
 
 	.account_nav{
 
@@ -291,9 +275,7 @@ $width: 180px;
 	// *******************************
 
 	// *******************************
-	/*
-		Site navigation, categories and general (blog, about, contact)
-	*/
+	// Site navigation, categories and general (blog, about, contact)
 
 	.nav_links{
 
@@ -401,8 +383,6 @@ $width: 180px;
 		}
 	}
 
-	/*
-		end Site navigation
-	*/
+	// end Site navigation
 	// *******************************
 }

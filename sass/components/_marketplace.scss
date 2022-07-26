@@ -29,6 +29,8 @@
 			color: variables.$aux1;
 			font-size: 2em;
 			cursor: pointer;
+
+			@media(max-width: variables.$large_breakpoint){margin: 0 10px;}
 		}
 
 		.carousel-inner{
@@ -127,6 +129,8 @@
 
 				flex: 1 0 100vw;
 				width: 100vw;
+
+				h3{margin-left: 40px;}
 			}
 		}
 
