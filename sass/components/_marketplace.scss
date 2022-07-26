@@ -3,7 +3,16 @@
 .home-product-hero{
 
 	height: 80vh;
+	
 	background: linear-gradient(180deg, #000000 33.85%, rgba(0, 0, 0, 0) 91.15%);
+
+	@media(max-width: variables.$large_breakpoint){padding:0;}
+
+	a{
+
+		color: variables.$primary;
+		text-decoration: none;
+	}
 
 	.hero-carousel{
 
@@ -49,12 +58,23 @@
 					margin-top: 30px;
 
 					color: variables.$aux1;
+
+					@media(max-width: variables.$small_breakpoint){
+
+						display: none;
+					}
 				}
 				.car-img{
-		
+					
 					background-color: variables.$secondary;
 					width: 800px;
 					height: 100%;
+					
+					@media(max-width: variables.$large_breakpoint){
+	
+						width: 600px;
+						margin-left: 10px;
+					}
 				}
 			}
 			.item-1{z-index: 1;}
@@ -66,12 +86,21 @@
 		display: flex;
 		justify-content: space-evenly;
 
+		@media(max-width: variables.$small_breakpoint){justify-content: flex-start;}
+
+		overflow-x: scroll;
+		scrollbar-width: none;
+
+		&::-webkit-scrollbar{
+
+			display: none;
+		}
+
 		margin-top: 20px;
 
 		.product-hero-card,.service-card{
 
 			flex: 0 1 22%;
-			// max-width: 22%;
 			aspect-ratio: 1 / 1;
 			padding-top: 10px;
 
@@ -87,6 +116,18 @@
 
 				background-color: variables.$secondary;
 			}
+
+			@media(max-width: variables.$large_breakpoint){
+
+				flex: 0 1 30%;
+				font-size: .8em;
+			}
+
+			@media(max-width: variables.$small_breakpoint){
+
+				flex: 1 0 100vw;
+				width: 100vw;
+			}
 		}
 
 		.service-card{
@@ -98,15 +139,23 @@
 
 			.service{
 
+				width: 80%;
+				height: 40%;
+				
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				white-space: nowrap;
+
 				background-color: variables.$secondary;
-				padding: 35px;
+
+				.title{margin: 0 10px;}
+			}
+
+			@media(max-width: variables.$large_breakpoint){
+
+				display: none;
 			}
 		}
-	}
-
-	a{
-
-		color: variables.$primary;
-		text-decoration: none;
 	}
 }

@@ -279,6 +279,15 @@
   height: 80vh;
   background: linear-gradient(180deg, #000000 33.85%, rgba(0, 0, 0, 0) 91.15%);
 }
+@media (max-width: 1200px) {
+  .home-product-hero {
+    padding: 0;
+  }
+}
+.home-product-hero a {
+  color: black;
+  text-decoration: none;
+}
 .home-product-hero .hero-carousel {
   display: flex;
   justify-content: space-between;
@@ -312,10 +321,21 @@
   margin-top: 30px;
   color: white;
 }
+@media (max-width: 600px) {
+  .home-product-hero .hero-carousel .carousel-inner .car-item .car-title {
+    display: none;
+  }
+}
 .home-product-hero .hero-carousel .carousel-inner .car-item .car-img {
   background-color: #d9d9d9;
   width: 800px;
   height: 100%;
+}
+@media (max-width: 1200px) {
+  .home-product-hero .hero-carousel .carousel-inner .car-item .car-img {
+    width: 600px;
+    margin-left: 10px;
+  }
 }
 .home-product-hero .hero-carousel .carousel-inner .item-1 {
   z-index: 1;
@@ -323,7 +343,17 @@
 .home-product-hero .product-cards {
   display: flex;
   justify-content: space-evenly;
+  overflow-x: scroll;
+  scrollbar-width: none;
   margin-top: 20px;
+}
+@media (max-width: 600px) {
+  .home-product-hero .product-cards {
+    justify-content: flex-start;
+  }
+}
+.home-product-hero .product-cards::-webkit-scrollbar {
+  display: none;
 }
 .home-product-hero .product-cards .product-hero-card, .home-product-hero .product-cards .service-card {
   flex: 0 1 22%;
@@ -340,6 +370,18 @@
   margin: 10px auto;
   background-color: #d9d9d9;
 }
+@media (max-width: 1200px) {
+  .home-product-hero .product-cards .product-hero-card, .home-product-hero .product-cards .service-card {
+    flex: 0 1 30%;
+    font-size: 0.8em;
+  }
+}
+@media (max-width: 600px) {
+  .home-product-hero .product-cards .product-hero-card, .home-product-hero .product-cards .service-card {
+    flex: 1 0 100vw;
+    width: 100vw;
+  }
+}
 .home-product-hero .product-cards .service-card {
   display: flex;
   flex-direction: column;
@@ -347,12 +389,21 @@
   align-items: center;
 }
 .home-product-hero .product-cards .service-card .service {
+  width: 80%;
+  height: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  white-space: nowrap;
   background-color: #d9d9d9;
-  padding: 35px;
 }
-.home-product-hero a {
-  color: black;
-  text-decoration: none;
+.home-product-hero .product-cards .service-card .service .title {
+  margin: 0 10px;
+}
+@media (max-width: 1200px) {
+  .home-product-hero .product-cards .service-card {
+    display: none;
+  }
 }
 
 * {
