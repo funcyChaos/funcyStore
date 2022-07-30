@@ -225,11 +225,7 @@
   color: white;
   font-size: 2em;
   cursor: pointer;
-}
-@media (max-width: 1200px) {
-  .home-product-hero .hero-carousel .car-left, .home-product-hero .hero-carousel .car-right {
-    margin: 0 10px;
-  }
+  margin: 0 10px;
 }
 .home-product-hero .hero-carousel .carousel-inner {
   width: 100%;
@@ -303,7 +299,7 @@
 }
 @media (max-width: 1200px) {
   .home-product-hero .product-cards .product-hero-card, .home-product-hero .product-cards .service-card {
-    flex: 0 1 32%;
+    flex: 0 1 30%;
     font-size: 0.8em;
   }
 }

@@ -30,7 +30,7 @@
 			font-size: 2em;
 			cursor: pointer;
 
-			@media(max-width: variables.$large_breakpoint){margin: 0 10px;}
+			margin: 0 10px;
 		}
 
 		.carousel-inner{
@@ -108,8 +108,6 @@
 
 			background-color: variables.$aux1;
 
-			// white-space: nowrap;
-
 			h3{margin-left: 10px;}
 
 			.product-image{
@@ -123,7 +121,7 @@
 
 			@media(max-width: variables.$large_breakpoint){
 
-				flex: 0 1 32%;
+				flex: 0 1 30%;
 				font-size: .8em;
 			}
 
