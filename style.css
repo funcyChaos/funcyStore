@@ -9,6 +9,7 @@
   left: -180px;
   width: 180px;
   transition: 0.1s;
+  overflow-y: scroll;
   padding: 100px 0;
   background-color: #d9d9d9;
 }
@@ -39,7 +40,7 @@
   display: grid;
   grid-template-columns: 1fr 4fr 2fr;
   grid-template-rows: 61px 36px;
-  grid-template-areas: "title search account" "nav nav nav";
+  grid-template-areas: "title search account" "cats cats cats";
   background-color: black;
   color: white;
 }
@@ -165,79 +166,37 @@
     display: block;
   }
 }
-.nav .nav_links {
-  grid-area: nav;
-  display: flex;
-  justify-content: space-between;
+.nav .categories {
+  grid-area: cats;
   background-color: #d9d9d9;
   color: black;
-}
-@media (max-width: 1200px) {
-  .nav .nav_links {
-    grid-area: cats;
-  }
-}
-.nav .nav_links .categories, .nav .nav_links .site_nav {
   display: flex;
   align-items: center;
-  flex: 1 0 40vw;
-  width: 40vw;
+  width: 100%;
+  overflow-x: scroll;
+  scrollbar-width: none;
 }
-.nav .nav_links .categories a, .nav .nav_links .site_nav a {
+.nav .categories a {
   white-space: nowrap;
   margin-right: 20px;
   color: black;
   text-decoration: none;
 }
-.nav .nav_links .categories a:first-of-type, .nav .nav_links .site_nav a:first-of-type {
+.nav .categories a:first-of-type {
   margin-left: 20px;
 }
-@media (max-width: 1200px) {
-  .nav .nav_links .categories, .nav .nav_links .site_nav {
-    background-color: black;
-    color: white;
-  }
-  .nav .nav_links .categories a, .nav .nav_links .site_nav a {
-    color: white;
-  }
-}
-.nav .nav_links .categories {
-  overflow-x: scroll;
-  scrollbar-width: none;
-}
-.nav .nav_links .categories::-webkit-scrollbar {
+.nav .categories::-webkit-scrollbar {
   display: none;
 }
 @media (max-width: 1200px) {
-  .nav .nav_links .categories #cat_bar_all {
-    display: none;
+  .nav .categories {
+    background-color: black;
+    color: white;
   }
-}
-@media (max-width: 600px) {
-  .nav .nav_links .site_nav {
-    justify-content: flex-end;
-    flex: 1 1;
+  .nav .categories a {
+    color: white;
   }
-  .nav .nav_links .site_nav a {
-    margin-right: 10px;
-  }
-}
-@media (max-width: 600px) and (max-width: 600px) {
-  .nav .nav_links .site_nav {
-    display: none;
-  }
-}
-.nav .nav_links .line {
-  background-color: black;
-  width: 8px;
-}
-@media (max-width: 1200px) {
-  .nav .nav_links .line {
-    background-color: white;
-  }
-}
-@media (max-width: 600px) {
-  .nav .nav_links .line {
+  .nav .categories #cat_bar_all {
     display: none;
   }
 }
@@ -344,7 +303,7 @@
 }
 @media (max-width: 1200px) {
   .home-product-hero .product-cards .product-hero-card, .home-product-hero .product-cards .service-card {
-    flex: 0 1 30%;
+    flex: 0 1 32%;
     font-size: 0.8em;
   }
 }

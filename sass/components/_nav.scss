@@ -24,6 +24,8 @@ $width: 180px;
 	width: $width;
 	transition: .1s;
 
+	overflow-y: scroll;
+
 	padding: 100px 0;
 
 	background-color: variables.$secondary;
@@ -72,7 +74,7 @@ $width: 180px;
 
 	grid-template-areas: 
 		"title search account"
-		"nav nav nav"
+		"cats cats cats"
 	;
 
 	// Main changes to grid at the large breakpoint
@@ -275,114 +277,57 @@ $width: 180px;
 	// *******************************
 
 	// *******************************
-	// Site navigation, categories and general (blog, about, contact)
+	// categories navigation
 
-	.nav_links{
+	.categories{
 
-		grid-area: nav;
-
-		@media(max-width: variables.$large_breakpoint){
-
-			grid-area: cats;
-		}
-
-		display: flex;
-		justify-content: space-between;
+		grid-area: cats;
 
 		background-color: variables.$secondary;
 		color: variables.$primary;
 
-		.categories, .site_nav{
-
-			display: flex;
-			align-items: center;
-			flex: 1 0 40vw;
-			width: 40vw;
-			
-			a{
-				
-				white-space: nowrap;
-				margin-right: 20px;
-				color: variables.$primary;
-				text-decoration: none;
-
-				&:first-of-type{
-
-					margin-left: 20px;
-				}
-			}
-			
-			@media(max-width: variables.$large_breakpoint){
-	
-				background-color: variables.$primary;
-				color: variables.$aux1;
-
-				a{
-
-					color: variables.$aux1;
-				}
-
-			}
-		}
-
-		.categories{
-
-			overflow-x: scroll;
-			scrollbar-width: none;
-
-			&::-webkit-scrollbar{
-
-				display: none;
-			}
-
-
-			@media(max-width: variables.$large_breakpoint){
-
-				#cat_bar_all{
-
-					display: none;
-				}
-			}
-		}
+		display: flex;
+		align-items: center;
+		width: 100%;
 		
-		@media(max-width: variables.$small_breakpoint){
+		a{
+			
+			white-space: nowrap;
+			margin-right: 20px;
+			color: variables.$primary;
+			text-decoration: none;
 
-			.site_nav{
-	
-				justify-content: flex-end;
+			&:first-of-type{
 
-				flex: 1 1;
-
-				a{
-
-					margin-right: 10px;
-				}
-
-				@media(max-width: variables.$small_breakpoint){
-
-					display: none;
-				}
+				margin-left: 20px;
 			}
 		}
 
-		.line{
+		overflow-x: scroll;
+		scrollbar-width: none;
+
+		&::-webkit-scrollbar{
+
+			display: none;
+		}
+
+		@media(max-width: variables.$large_breakpoint){
 
 			background-color: variables.$primary;
-			width: 8px;
+			color: variables.$aux1;
 
-			@media(max-width: variables.$large_breakpoint){
-
-				background-color: variables.$aux1;	
+			a{
+				
+				color: variables.$aux1;
 			}
-
-			@media(max-width: variables.$small_breakpoint){
-
+			
+			#cat_bar_all{
+	
 				display: none;
-
 			}
 		}
 	}
 
-	// end Site navigation
+	// end categories navigation
 	// *******************************
 }

@@ -108,6 +108,8 @@
 
 			background-color: variables.$aux1;
 
+			// white-space: nowrap;
+
 			h3{margin-left: 10px;}
 
 			.product-image{
@@ -121,7 +123,7 @@
 
 			@media(max-width: variables.$large_breakpoint){
 
-				flex: 0 1 30%;
+				flex: 0 1 32%;
 				font-size: .8em;
 			}
 
