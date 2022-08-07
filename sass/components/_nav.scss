@@ -1,12 +1,7 @@
 @use "../variables";
+@use "../mixins";
 
 $width: 180px;
-
-@mixin aTagDefaults{
-	
-	color: variables.$primary;
-	text-decoration: none;
-}
 
 .nav{
 
@@ -20,7 +15,7 @@ $width: 180px;
 	grid-template-columns: 1fr 4fr 2fr;
 	grid-template-rows: 61px 36px;
 
-	grid-template-areas: 
+	grid-template-areas:
 		"title search account"
 		"cats cats cats"
 	;
@@ -247,8 +242,7 @@ $width: 180px;
 			
 			white-space: nowrap;
 			margin-right: 20px;
-			color: variables.$primary;
-			text-decoration: none;
+			@include mixins.aTagDefaults;
 
 			&:first-of-type{
 
@@ -318,7 +312,7 @@ $width: 180px;
 	a{
 
 		margin: 5px 40px;
-		@include aTagDefaults();
+		@include mixins.aTagDefaults;
 
 		&:first-of-type{
 

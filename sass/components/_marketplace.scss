@@ -1,18 +1,15 @@
 @use "../variables";
+@use "../mixins";
 
 .home-product-hero{
 
 	// height: 80vh;
 	
-	background: linear-gradient(180deg, #000000 33.85%, rgba(0, 0, 0, 0) 91.15%);
+	background: linear-gradient(180deg, #000000 33.85%, rgba(0, 0, 0, 0) 90%);
 
 	@media(max-width: variables.$large_breakpoint){padding:0;}
 
-	a{
-
-		color: variables.$primary;
-		text-decoration: none;
-	}
+	a{@include mixins.aTagDefaults;}
 
 	.hero-carousel{
 

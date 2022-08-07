@@ -205,7 +205,7 @@
 }
 
 .home-product-hero {
-  background: linear-gradient(180deg, #000000 33.85%, rgba(0, 0, 0, 0) 91.15%);
+  background: linear-gradient(180deg, #000000 33.85%, rgba(0, 0, 0, 0) 90%);
 }
 @media (max-width: 1200px) {
   .home-product-hero {
@@ -339,14 +339,38 @@
   }
 }
 
+.footer {
+  margin-top: 20px;
+  height: calc(100vh - 97px);
+}
+.footer a {
+  color: black;
+  text-decoration: none;
+}
 .footer .top {
   background-color: black;
-  height: calc(60vh + 97px);
+  height: 40%;
 }
+.footer .bottom {
+  display: flex;
+  justify-content: center;
+  background-color: #d9d9d9;
+  height: 60%;
+  padding: 0 50px;
+}
+.footer .bottom .column {
+  flex: 1 1 20%;
+  padding: 30px 20px;
+}
+
 * {
   margin: 0;
   padding: 0;
   font-family: "Kotta One", serif;
+}
+
+.spacer {
+  height: 100vh;
 }
 
 /*# sourceMappingURL=style.css.map */
