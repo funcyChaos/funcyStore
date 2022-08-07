@@ -1,0 +1,17 @@
+@use "../variables";
+
+.footer{
+
+	$header: 97px;
+
+	.top{
+
+		background-color: variables.$primary;
+		height: calc(60vh + $header);
+	}
+
+	.bottom{
+
+
+	}
+}
