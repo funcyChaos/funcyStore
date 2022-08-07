@@ -348,19 +348,31 @@
   text-decoration: none;
 }
 .footer .top {
+  display: flex;
+  justify-content: center;
+  color: white;
   background-color: black;
   height: 40%;
+}
+.footer .top:first-child {
+  margin-top: 20px;
 }
 .footer .bottom {
   display: flex;
   justify-content: center;
+  align-items: center;
   background-color: #d9d9d9;
   height: 60%;
   padding: 0 50px;
 }
 .footer .bottom .column {
-  flex: 1 1 20%;
-  padding: 30px 20px;
+  flex: 0 1 20%;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 30px;
+}
+.footer .bottom .column a {
+  margin: 5px 0;
 }
 
 * {

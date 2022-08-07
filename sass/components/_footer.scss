@@ -16,14 +16,24 @@ $header: 97px;
 
 	.top{
 
+		display: flex;
+		justify-content: center;
+
+		color: white;
 		background-color: variables.$primary;
 		height: 40%;
+
+		&:first-child{
+
+			margin-top: 20px;
+		}
 	}
 
 	.bottom{
 
 		display: flex;
 		justify-content: center;
+		align-items: center;
 
 		background-color: variables.$secondary;
 		height: 60%;
@@ -32,9 +42,14 @@ $header: 97px;
 
 		.column{
 
-			flex: 1 1 20%;
+			flex: 0 1 20%;
 
-			padding: 30px 20px;
+			display: flex;
+			flex-direction: column;
+
+			padding: 20px 30px;
+
+			a{margin: 5px 0;}
 		}
 	}
 }
