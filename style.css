@@ -363,6 +363,12 @@
   color: white;
   background-color: black;
   height: 60%;
+  padding: 0 50px;
+}
+@media (max-width: 1200px) {
+  .footer .top {
+    padding: 0 10px;
+  }
 }
 .footer .top > * {
   margin-top: 20px;
@@ -372,7 +378,7 @@
 }
 .footer .top .newsletter-image {
   flex: 1 1;
-  width: 80%;
+  width: 90%;
   background-color: #d9d9d9;
 }
 .footer .top a.button {

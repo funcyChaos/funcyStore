@@ -12,37 +12,29 @@
 		height: calc(100vh - variables.$nav_mobi_total);
 	}
 
-	a{
-
-		@include mixins.aTagDefaults;
-	}
+	a{@include mixins.aTagDefaults;}
 
 	.top{
 
 		display: flex;
-		// justify-content: center;
 		align-items: center;
 		flex-direction: column;
 
 		color: white;
 		background-color: variables.$primary;
 		height: 60%;
+		padding: 0 50px;
+		@media(max-width: variables.$large_breakpoint){padding: 0 10px;}
 
-		&>*{
+		&>*{margin-top: 20px;}
 
-			margin-top: 20px;
-		}
-
-		p{
-
-			font-weight: bold;
-		}
+		p{font-weight: bold;}
 
 		.newsletter-image{
 
 			flex: 1 1;
 
-			width: 80%;
+			width: 90%;
 
 			background-color: variables.$secondary;
 		}
