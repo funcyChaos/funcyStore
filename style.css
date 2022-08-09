@@ -12,7 +12,7 @@
 }
 @media (max-width: 1200px) {
   .nav {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 2fr;
     grid-template-rows: 40px 50px 40px;
     grid-template-areas: "topl topr" "search search" "cats cats";
   }
@@ -21,8 +21,16 @@
   grid-area: title;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   padding-left: 10px;
   letter-spacing: 1px;
+}
+.nav .title a {
+  color: white;
+  text-decoration: none;
+}
+.nav .title .blog {
+  margin-left: 20px;
 }
 .nav .title #cat_mobi_all {
   display: none;
@@ -35,13 +43,12 @@
   .nav .title #main_title {
     font-size: 1.2em;
   }
-  .nav .title #cat_mobi_all {
+  .nav .title #cat_mobi_all, .nav .title #blog_icon {
     display: block;
   }
-}
-.nav .title a {
-  color: white;
-  text-decoration: none;
+  .nav .title #blog_word {
+    display: none;
+  }
 }
 .nav .nav_search {
   grid-area: search;
@@ -117,10 +124,7 @@
   text-decoration: none;
   white-space: nowrap;
 }
-.nav .account_nav #orders_icon {
-  display: none;
-}
-.nav .account_nav #signin_icon {
+.nav .account_nav #blog_icon, .nav .account_nav #orders_icon, .nav .account_nav #signin_icon {
   display: none;
 }
 @media (max-width: 1200px) {
@@ -130,7 +134,7 @@
   .nav .account_nav #signin_words, .nav .account_nav #orders_words, .nav .account_nav #cart_word {
     display: none;
   }
-  .nav .account_nav #orders_icon, .nav .account_nav #signin_icon {
+  .nav .account_nav #blog_icon, .nav .account_nav #orders_icon, .nav .account_nav #signin_icon {
     display: block;
   }
 }

@@ -24,7 +24,7 @@ $width: 180px;
 
 	@media(max-width: variables.$large_breakpoint){
 
-		grid-template-columns: 1fr 1fr;
+		grid-template-columns: 1fr 2fr;
 		grid-template-rows: 40px 50px 40px;
 
 		grid-template-areas:
@@ -32,8 +32,6 @@ $width: 180px;
 			"search search"
 			"cats cats"
 		;
-
-		// padding: 5px 10px 0 10px;
 	}
 
 	background-color: variables.$primary;
@@ -48,38 +46,34 @@ $width: 180px;
 
 		display: flex;
 		align-items: center;
-
+		justify-content: space-between;
+		
 		padding-left: 10px;
 		letter-spacing: 1px;
+		
+		a{
+
+			color: variables.$aux1;
+			text-decoration: none;
+		}
+
+		.blog{margin-left: 20px;}
 
 		#cat_mobi_all{
 
 			display: none;
 
 			margin-right: 5px;
-			// margin-left: 5px;
 		}
 		
 		@media(max-width: variables.$large_breakpoint){
 
 			grid-area: topl;
-			// padding: 0;
 
-			#main_title{
+			#main_title{font-size: 1.2em;}
 
-				font-size: 1.2em;
-			}
-
-			#cat_mobi_all{
-
-				display: block;
-			}
-		}
-
-		a{
-
-			color: variables.$aux1;
-			text-decoration: none;
+			#cat_mobi_all, #blog_icon{display: block;}
+			#blog_word{display: none;}
 		}
 	}
 
@@ -104,10 +98,7 @@ $width: 180px;
 			width: 95%;
 			height: 70%;
 
-			@media(max-width: variables.$large_breakpoint){
-
-				width: 100%;
-			}
+			@media(max-width: variables.$large_breakpoint){width: 100%;}
 			
 			background-color: variables.$aux1;
 			color: variables.$primary;
@@ -128,10 +119,7 @@ $width: 180px;
 				border-top-left-radius: $border-radius;
 				border-bottom-left-radius: $border-radius;
 
-				@media(max-width: variables.$small_breakpoint){
-
-					display: none;
-				}
+				@media(max-width: variables.$small_breakpoint){display: none;}
 			}
 			
 			input{
@@ -165,10 +153,7 @@ $width: 180px;
 			}
 		}
 
-		@media(max-width: variables.$large_breakpoint){
-
-			padding: 0 10px;
-		}
+		@media(max-width: variables.$large_breakpoint){padding: 0 10px;}
 	}
 
 	// end Search form in the navbar area
@@ -200,29 +185,15 @@ $width: 180px;
 		// 	text-decoration: underline;
 		// }
 
-		#orders_icon{
-
-			display: none;
-		}
-
-		#signin_icon{
-
-			display: none;
-		}
+		#blog_icon, #orders_icon, #signin_icon{display: none;}
 
 		@media(max-width: variables.$large_breakpoint){
 
 			grid-area: topr;
 
-			#signin_words, #orders_words, #cart_word{
-
-				display: none;
-			}
+			#signin_words, #orders_words, #cart_word{display: none;}
 			
-			#orders_icon, #signin_icon{
-				
-				display: block;
-			}
+			#blog_icon, #orders_icon, #signin_icon{display: block;}
 		}
 	}
 
@@ -249,43 +220,17 @@ $width: 180px;
 			margin-right: 20px;
 			@include mixins.aTagDefaults;
 
-			&:first-of-type{
+			&:first-of-type{margin-left: 20px;}
 
-				margin-left: 20px;
-			}
-
-			@media(max-width: variables.$large_breakpoint){
-
-				&:nth-child(2){
-
-					margin-left: 10px;
-				}
-			}
+			@media(max-width: variables.$large_breakpoint){&:nth-child(2){margin-left: 10px;}}
 		}
 
 		overflow-x: scroll;
 		scrollbar-width: none;
 
-		&::-webkit-scrollbar{
+		&::-webkit-scrollbar{display: none;}
 
-			display: none;
-		}
-
-		@media(max-width: variables.$large_breakpoint){
-
-			// background-color: variables.$primary;
-			// color: variables.$aux1;
-
-			a{
-				
-				// color: variables.$aux1;
-			}
-			
-			#cat_bar_all{
-	
-				display: none;
-			}
-		}
+		@media(max-width: variables.$large_breakpoint){#cat_bar_all{display: none;}}
 	}
 
 	// end categories navigation
