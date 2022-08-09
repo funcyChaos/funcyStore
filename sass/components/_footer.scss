@@ -1,13 +1,16 @@
 @use "../variables";
 @use "../mixins";
 
-$header: 97px;
-
 .footer{
 
 	margin-top: 20px;
 
-	height: calc(100vh - $header);
+	height: calc(100vh - variables.$nav_total);
+	
+	@media (max-width: variables.$large_breakpoint){
+	
+		height: calc(100vh - variables.$nav_mobi_total);
+	}
 
 	a{
 

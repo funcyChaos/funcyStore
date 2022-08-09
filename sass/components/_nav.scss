@@ -13,7 +13,7 @@ $width: 180px;
 
 	display: grid;
 	grid-template-columns: 1fr 4fr 2fr;
-	grid-template-rows: 61px 36px;
+	grid-template-rows: variables.$nav_row_1 variables.$nav_row_2;
 
 	grid-template-areas:
 		"title search account"
