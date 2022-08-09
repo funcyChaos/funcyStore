@@ -17,15 +17,40 @@ $header: 97px;
 	.top{
 
 		display: flex;
-		justify-content: center;
+		// justify-content: center;
+		align-items: center;
+		flex-direction: column;
 
 		color: white;
 		background-color: variables.$primary;
-		height: 40%;
+		height: 60%;
 
-		&:first-child{
+		&>*{
 
 			margin-top: 20px;
+		}
+
+		p{
+
+			font-weight: bold;
+		}
+
+		.newsletter-image{
+
+			flex: 1 1;
+
+			width: 80%;
+
+			background-color: variables.$secondary;
+		}
+
+		a.button{
+
+			font-weight: bold;
+			background-color: variables.$aux1;
+			padding: 10px;
+			margin-bottom: 20px;
+			border-radius: 5px;
 		}
 	}
 
@@ -33,10 +58,9 @@ $header: 97px;
 
 		display: flex;
 		justify-content: center;
-		align-items: center;
 
 		background-color: variables.$secondary;
-		height: 60%;
+		height: 40%;
 
 		padding: 0 50px;
 
@@ -46,10 +70,13 @@ $header: 97px;
 
 			display: flex;
 			flex-direction: column;
+			align-items: flex-start;
 
-			padding: 20px 30px;
+			padding: 50px 30px;
 
 			a{margin: 5px 0;}
+
+			a:hover{text-decoration: underline;}
 		}
 	}
 }

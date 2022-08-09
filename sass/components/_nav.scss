@@ -187,13 +187,18 @@ $width: 180px;
 
 		margin-right: 20px;
 
-		&>a{
+		a{
 
 			display: flex;
 			color: variables.$aux1;
 			text-decoration: none;
 			white-space: nowrap;
 		}
+
+		// a:hover{
+
+		// 	text-decoration: underline;
+		// }
 
 		#orders_icon{
 
