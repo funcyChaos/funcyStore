@@ -391,16 +391,29 @@
 .footer .bottom {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   background-color: #d9d9d9;
   height: 40%;
-  padding: 0 50px;
+  padding: 0 60px;
+}
+@media (max-width: 725px) {
+  .footer .bottom {
+    padding: 0 20px;
+    height: auto;
+  }
 }
 .footer .bottom .column {
-  flex: 0 1 20%;
+  flex: 0 1 15%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   padding: 50px 30px;
+}
+@media (max-width: 650px) {
+  .footer .bottom .column {
+    flex-basis: 40%;
+    padding: 15px 15px;
+  }
 }
 .footer .bottom .column a {
   margin: 5px 0;
