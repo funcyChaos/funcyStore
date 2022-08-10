@@ -13,6 +13,11 @@
 	}
 
 	a{@include mixins.aTagDefaults;}
+	
+	display: grid;
+
+	grid-template-columns: 1fr;
+	grid-template-rows: 3fr 2fr;
 
 	.top{
 
@@ -22,7 +27,6 @@
 
 		color: white;
 		background-color: variables.$primary;
-		height: 60%;
 		padding: 0 50px;
 		@media(max-width: variables.$large_breakpoint){padding: 0 10px;}
 
@@ -37,16 +41,6 @@
 			width: 90%;
 
 			background-color: variables.$secondary;
-		}
-		
-		@media(max-width: 725px){
-			
-			height: auto;
-
-			.newsletter-image{
-				
-				display: none;
-			}
 		}
 
 		a.button{
@@ -65,32 +59,19 @@
 		justify-content: center;
 		flex-wrap: wrap;
 
+		padding: 0 20px;
 		background-color: variables.$secondary;
-		height: 40%;
-
-		padding: 0 60px;
-
-		@media(max-width: 725px){
-		
-			padding: 0 20px;
-			height: auto;
-		}
 		
 		.column{
 			
-			flex: 0 1 15%;
+			flex: 0 1 20%;
+			@media(max-width: 850px){flex: 0 1 30%;}
 			
 			display: flex;
 			flex-direction: column;
 			align-items: flex-start;
 			
 			padding: 20px;
-			
-			@media(max-width: 650px){
-
-				flex-basis: 40%;
-				padding: 15px 15px;
-			}
 
 			a{margin: 5px 0;}
 
