@@ -38,6 +38,16 @@
 
 			background-color: variables.$secondary;
 		}
+		
+		@media(max-width: 725px){
+			
+			height: auto;
+
+			.newsletter-image{
+				
+				display: none;
+			}
+		}
 
 		a.button{
 
@@ -74,7 +84,7 @@
 			flex-direction: column;
 			align-items: flex-start;
 			
-			padding: 50px 30px;
+			padding: 20px;
 			
 			@media(max-width: 650px){
 
