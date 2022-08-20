@@ -4,6 +4,7 @@
 .single-product-grid{
 
 	display: grid;
+
 	height: 100vh;
 	margin: 50px;
 
@@ -15,6 +16,8 @@
 
 	grid-template-rows: 100px 100px auto;
 
+	column-gap: 80px;
+
 	grid-template-areas:
 		"left-column title"
 		"left-column cart"
@@ -24,8 +27,6 @@
 	.title{
 	
 		grid-area: title;
-		// border: dashed 5px;
-		background-color: #5555;
 	}
 	
 	.cart{
@@ -35,20 +36,59 @@
 		position: sticky;
 		top: variables.$nav_total;
 
-		// border: dashed 5px;
-		background-color: blue;
+		.quantity{
+
+			display: flex;
+			align-items: center;
+			justify-content: space-around;
+
+			height: 40px;
+			aspect-ratio: 3 / 1;
+
+			color: variables.$aux1;
+			font-weight: bolder;
+			font-size: 1.5rem;
+			text-align: center;
+			background-color: variables.$aux2fix;
+
+			border-radius: 5px;
+
+			*{flex-basis: 33%;}
+
+			#quantity-count{
+
+				display: flex;
+				justify-content: center;
+				align-items: center;
+
+				height: 80%;
+
+				color: black;
+				background-color: white;
+			}
+		}
 	}
 	
 	.description{
 	
 		grid-area: description;
-		border: dashed 5px;
+		// border: dashed 5px;
 	}
 	
 	.left-column{
 	
 		grid-area: left-column;
-		border: dashed 5px;
+		// border: dashed 5px;
+
+		display: flex;
+		flex-direction: column;
+
+		.preview-1{
+
+			width: 100%;
+			aspect-ratio: 4 / 3;
+			background-color: #d9d9d9;
+		}
 	}
 }
 
