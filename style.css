@@ -354,7 +354,7 @@
   height: 100vh;
   margin: 50px;
   grid-template-columns: 35vw 1fr;
-  grid-template-rows: 100px 100px auto;
+  grid-template-rows: 60px 50px auto;
   column-gap: 80px;
   grid-template-areas: "left-column title" "left-column cart" "left-column description";
 }
@@ -365,16 +365,16 @@
   grid-area: cart;
   position: sticky;
   top: 97px;
+  display: flex;
 }
 .single-product-grid .cart .quantity {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  height: 40px;
   aspect-ratio: 3/1;
   color: white;
   font-weight: bolder;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   text-align: center;
   background-color: #555;
   border-radius: 5px;
@@ -389,6 +389,22 @@
   height: 80%;
   color: black;
   background-color: white;
+}
+.single-product-grid .cart .add-to-cart {
+  display: flex;
+  align-items: center;
+  margin-left: 15px;
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: black;
+  color: white;
+  font-weight: bolder;
+  font-size: 1.4em;
+  border-radius: 5px;
+}
+.single-product-grid .cart .add-to-cart .fa-cart-plus {
+  margin-left: 10px;
+  font-size: 30px;
 }
 .single-product-grid .description {
   grid-area: description;

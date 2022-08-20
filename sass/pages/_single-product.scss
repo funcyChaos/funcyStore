@@ -8,13 +8,9 @@
 	height: 100vh;
 	margin: 50px;
 
-	// border: dashed 5px;
-
-	// background-color: gray;
-
 	grid-template-columns: 35vw 1fr;
 
-	grid-template-rows: 100px 100px auto;
+	grid-template-rows: 60px 50px auto;
 
 	column-gap: 80px;
 
@@ -36,21 +32,21 @@
 		position: sticky;
 		top: variables.$nav_total;
 
+		display: flex;
+
 		.quantity{
 
 			display: flex;
 			align-items: center;
 			justify-content: space-around;
 
-			height: 40px;
 			aspect-ratio: 3 / 1;
 
 			color: variables.$aux1;
 			font-weight: bolder;
-			font-size: 1.5rem;
+			font-size: 1.8rem;
 			text-align: center;
 			background-color: variables.$aux2fix;
-
 			border-radius: 5px;
 
 			*{flex-basis: 33%;}
@@ -65,6 +61,28 @@
 
 				color: black;
 				background-color: white;
+			}
+		}
+
+		.add-to-cart{
+
+			display: flex;
+			align-items: center;
+
+			margin-left: 15px;
+			padding-left: 10px;
+			padding-right: 10px;
+
+			background-color: black;
+			color: white;
+			font-weight: bolder;
+			font-size: 1.4em;
+			border-radius: 5px;
+			
+			.fa-cart-plus{
+				
+				margin-left: 10px;
+				font-size: 30px;
 			}
 		}
 	}
