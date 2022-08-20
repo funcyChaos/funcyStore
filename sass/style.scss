@@ -1,5 +1,8 @@
 @use "./components/nav";
-@use "./components/marketplace";
+
+@use "./components/marketplace-home";
+@use "./pages/single-product";
+
 @use "./components/footer";
 
 @import url('https://fonts.googleapis.com/css2?family=Kotta+One&display=swap');

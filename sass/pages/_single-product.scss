@@ -1,0 +1,60 @@
+@use "../variables";
+@use "../mixins";
+
+.single-product-grid{
+
+	display: grid;
+	height: 100vh;
+	margin: 50px;
+
+	// border: dashed 5px;
+
+	// background-color: gray;
+
+	grid-template-columns: 35vw 1fr;
+
+	grid-template-rows: 100px 100px auto;
+
+	grid-template-areas:
+		"left-column title"
+		"left-column cart"
+		"left-column description"
+	;
+	
+	.title{
+	
+		grid-area: title;
+		// border: dashed 5px;
+		background-color: #5555;
+	}
+	
+	.cart{
+	
+		grid-area: cart;
+
+		position: sticky;
+		top: variables.$nav_total;
+
+		// border: dashed 5px;
+		background-color: blue;
+	}
+	
+	.description{
+	
+		grid-area: description;
+		border: dashed 5px;
+	}
+	
+	.left-column{
+	
+		grid-area: left-column;
+		border: dashed 5px;
+	}
+}
+
+.bread-crumbs{
+
+	background-color: #555;
+	height: 35px;
+	width: 100vw;
+}
