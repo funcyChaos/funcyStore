@@ -354,7 +354,7 @@
   height: 100vh;
   margin: 50px;
   grid-template-columns: 35vw 1fr;
-  grid-template-rows: 60px 50px auto;
+  grid-template-rows: 60px 80px auto;
   column-gap: 80px;
   grid-template-areas: "left-column title" "left-column cart" "left-column description";
 }
@@ -363,11 +363,18 @@
 }
 .single-product-grid .cart {
   grid-area: cart;
+  display: flex;
   position: sticky;
   top: 97px;
-  display: flex;
+  padding-top: 10px;
+  background-color: white;
+  box-shadow: 0 5px 5px -4px gray;
 }
-.single-product-grid .cart .quantity {
+.single-product-grid .cart .cart-inner {
+  display: flex;
+  height: 50px;
+}
+.single-product-grid .cart .cart-inner .quantity {
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -379,10 +386,10 @@
   background-color: #555;
   border-radius: 5px;
 }
-.single-product-grid .cart .quantity * {
+.single-product-grid .cart .cart-inner .quantity * {
   flex-basis: 33%;
 }
-.single-product-grid .cart .quantity #quantity-count {
+.single-product-grid .cart .cart-inner .quantity #quantity-count {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -390,7 +397,7 @@
   color: black;
   background-color: white;
 }
-.single-product-grid .cart .add-to-cart {
+.single-product-grid .cart .cart-inner .add-to-cart {
   display: flex;
   align-items: center;
   margin-left: 15px;
@@ -402,12 +409,29 @@
   font-size: 1.4em;
   border-radius: 5px;
 }
-.single-product-grid .cart .add-to-cart .fa-cart-plus {
+.single-product-grid .cart .cart-inner .add-to-cart .fa-cart-plus {
   margin-left: 10px;
   font-size: 30px;
 }
+.single-product-grid .cart .cart-inner .ratings {
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+}
+.single-product-grid .cart .cart-inner .ratings .star-rating {
+  width: 92.5308px;
+  overflow: hidden;
+  white-space: nowrap;
+  margin-right: 10px;
+}
+.single-product-grid .cart .cart-inner .ratings h5 {
+  color: black;
+}
 .single-product-grid .description {
   grid-area: description;
+  width: 50%;
+  margin-top: 35px;
+  font-size: 1.2rem;
 }
 .single-product-grid .left-column {
   grid-area: left-column;
