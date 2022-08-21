@@ -107,6 +107,8 @@
 				.star-rating{
 	
 					$stars: 102.812px;
+
+					color: gold;
 	
 					width: calc($stars * .9);
 					overflow: hidden;

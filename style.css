@@ -419,6 +419,7 @@
   margin-left: 10px;
 }
 .single-product-grid .cart .cart-inner .ratings .star-rating {
+  color: gold;
   width: 92.5308px;
   overflow: hidden;
   white-space: nowrap;
