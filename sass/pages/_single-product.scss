@@ -5,7 +5,6 @@
 
 	display: grid;
 
-	height: 100vh;
 	margin: 50px;
 
 	grid-template-columns: 35vw 1fr;
@@ -20,6 +19,8 @@
 		"left-column description"
 	;
 
+
+	// overflow: hidden;
 	.left-column{
 	
 		grid-area: left-column;

@@ -18,7 +18,5 @@ if((window.innerHeight - (nav + 20)) > previewElement.offsetHeight){
 	previewElement.style.top = `${nav + 10}px`;
 }else{
 
-	console.log('triggered');
-
-	previewElement.style.top = `${previewElement.offsetHeight - window.innerHeight + nav}px`;
+	previewElement.style.top = `${-(previewElement.offsetHeight - window.innerHeight + 30)}px`;
 }
