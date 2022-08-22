@@ -7,7 +7,7 @@ const previewElement = document.getElementById('preview_element');
 document.addEventListener('scroll', (e)=>{
 
 	const scroll = this.scrollY;
-	const fadeLength = 350;
+	const fadeLength = 60;
 
 	if(scroll === 0){preview2.style.opacity = 0;}
 	else{preview2.style.opacity = scroll / fadeLength;}

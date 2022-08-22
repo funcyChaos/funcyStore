@@ -349,6 +349,25 @@
   }
 }
 
+.bread-crumbs {
+  color: white;
+  background-color: #555;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+}
+.bread-crumbs a {
+  color: white;
+  text-decoration: none;
+}
+.bread-crumbs a:hover {
+  text-decoration: underline;
+}
+.bread-crumbs * {
+  margin-right: 10px;
+}
+
 .single-product-grid {
   display: grid;
   margin: 50px;
@@ -457,12 +476,6 @@
   width: 70%;
   margin-top: 35px;
   font-size: 1.2rem;
-}
-
-.bread-crumbs {
-  background-color: #555;
-  height: 35px;
-  width: 100vw;
 }
 
 .footer {
