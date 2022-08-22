@@ -112,14 +112,14 @@
 			</div>
 			<div class="cart">
 				<div class="cart-inner">
-					<div class="quantity">
-						<i class="fas fa-minus"></i>
-						<div id="quantity-count">
-							3
+					<form action="./single-product.html">
+						<div class="quantity">
+							<i class="fas fa-minus" id="qty_minus"></i>
+							<input type="text" name="quantity" value="1" id="qty-count"></input>
+							<i class="fas fa-plus" id="qty_plus"></i>
 						</div>
-						<i class="fas fa-plus"></i>
-					</div>
-					<button class="add-to-cart">Add To Cart <i class="fas fa-cart-plus"></i></button>
+						<button type="submit" class="add-to-cart">Add To Cart <i class="fas fa-cart-plus"></i></button>
+					</form>
 					<div class="ratings">
 						<div class="star-rating">
 							<i class="fas fa-star"></i>

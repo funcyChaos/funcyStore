@@ -72,6 +72,12 @@
 			display: flex;
 			height: 50px;
 
+			form{
+
+				display: flex;
+				height: 50px;
+			}
+
 			.quantity{
 	
 				display: flex;
@@ -88,17 +94,19 @@
 				border-radius: 5px;
 	
 				*{flex-basis: 33%;}
+
+				.fas:hover{
+
+					cursor: pointer;
+				}
 	
-				#quantity-count{
+				#qty-count{
 	
-					display: flex;
-					justify-content: center;
-					align-items: center;
-	
-					height: 80%;
-	
-					color: black;
-					background-color: white;
+					height: 60%;
+					width: 33%;
+					font-size: 1.8rem;
+					text-align: center;
+					outline: none;
 				}
 			}
 	
@@ -116,6 +124,7 @@
 				font-weight: bolder;
 				font-size: 1.4em;
 				border-radius: 5px;
+				cursor: pointer;
 				
 				.fa-cart-plus{
 					
