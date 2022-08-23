@@ -32,10 +32,6 @@ qtyCount.addEventListener('input', ()=>{
 	let input = qtyCount.value;
 
 	if(parseInt(input) === 0){qtyCount.value = 1;}
-	if(!isNaN(parseFloat(input) && isFinite(input))){
-
-		qtyCount.value = 1
-	}
 })
 
 if((window.innerHeight - (nav + 20)) > previewElement.offsetHeight){

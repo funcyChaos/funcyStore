@@ -425,6 +425,7 @@
   text-align: center;
   background-color: #555;
   border-radius: 5px;
+  /* Firefox */
 }
 .single-product-grid .cart .cart-inner .quantity * {
   flex-basis: 33%;
@@ -438,6 +439,14 @@
   font-size: 1.8rem;
   text-align: center;
   outline: none;
+}
+.single-product-grid .cart .cart-inner .quantity input::-webkit-outer-spin-button,
+.single-product-grid .cart .cart-inner .quantity input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.single-product-grid .cart .cart-inner .quantity input[type=number] {
+  -moz-appearance: textfield;
 }
 .single-product-grid .cart .cart-inner .add-to-cart {
   display: flex;
