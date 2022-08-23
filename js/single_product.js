@@ -27,6 +27,17 @@ qtyPlus.addEventListener('click', ()=>{
 	qtyCount.value = parseInt(qtyCount.value) + 1;
 });
 
+qtyCount.addEventListener('input', ()=>{
+
+	let input = qtyCount.value;
+
+	if(parseInt(input) === 0){qtyCount.value = 1;}
+	if(!isNaN(parseFloat(input) && isFinite(input))){
+
+		qtyCount.value = 1
+	}
+})
+
 if((window.innerHeight - (nav + 20)) > previewElement.offsetHeight){
 
 	previewElement.style.top = `${nav + 10}px`;
