@@ -432,7 +432,7 @@
 .single-product-grid .cart .cart-inner .quantity .fas:hover {
   cursor: pointer;
 }
-.single-product-grid .cart .cart-inner .quantity #qty-count {
+.single-product-grid .cart .cart-inner .quantity #qty_count {
   height: 60%;
   width: 33%;
   font-size: 1.8rem;
