@@ -1,10 +1,15 @@
-const nav = document.getElementById('navbar').offsetHeight
-const previewElement = document.getElementById('preview_element');
-const preview2 = document.getElementById('preview_2');
-const qtyMinus = document.getElementById('qty_minus');
-const qtyPlus = document.getElementById('qty_plus');
-const qtyCount = document.getElementById('qty_count');
+const nav 						= document.getElementById('navbar').offsetHeight
+const previewElement	= document.getElementById('preview_element');
+const preview2 				= document.getElementById('preview_2');
+const qtyMinus 				= document.getElementById('qty_minus');
+const qtyPlus 				= document.getElementById('qty_plus');
+const qtyCount 				= document.getElementById('qty_count');
+const reviewsTitle 		= document.getElementById('reviews_title');
+const specsTitle 			= document.getElementById('specs_title');
+const reviewsSect			= document.getElementById('reviews_sect');
+const specsSect				= document.getElementById('specs_sect');
 
+// second preview fade in
 document.addEventListener('scroll', (e)=>{
 
 	const scroll = this.scrollY;
@@ -14,6 +19,7 @@ document.addEventListener('scroll', (e)=>{
 	else{preview2.style.opacity = scroll / fadeLength;}
 });
 
+// Quantity functionality
 qtyMinus.addEventListener('click', ()=>{
 
 	if(parseInt(qtyCount.value) > 1){
@@ -34,6 +40,26 @@ qtyCount.addEventListener('input', ()=>{
 	if(parseInt(input) === 0){qtyCount.value = 1;}
 })
 
+// reviews and specs functionality
+reviewsTitle.addEventListener('click', ()=>{
+
+	specsSect.style.display							= 'none';
+	specsTitle.style.backgroundColor		= 'white';
+
+	reviewsSect.style.display						= 'block';
+	reviewsTitle.style.backgroundColor	= '#d9d9d9';
+});
+
+specsTitle.addEventListener('click', ()=>{
+
+	reviewsSect.style.display	= 'none';
+	reviewsTitle.style.backgroundColor	= 'white';
+
+	specsSect.style.display		= 'block';
+	specsTitle.style.backgroundColor	= '#d9d9d9';
+});
+
+// Preview top adjust
 if((window.innerHeight - (nav + 20)) > previewElement.offsetHeight){
 
 	previewElement.style.top = `${nav + 10}px`;
@@ -41,3 +67,4 @@ if((window.innerHeight - (nav + 20)) > previewElement.offsetHeight){
 
 	previewElement.style.top = `${-(previewElement.offsetHeight - window.innerHeight + 30)}px`;
 }
+

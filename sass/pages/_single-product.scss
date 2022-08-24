@@ -197,9 +197,83 @@
 	
 		grid-area: description;
 
-		width: 70%;
-		margin-top: 35px;
+		.description-wrapper{
+			
+			width: 70%;
+			margin-top: 35px;
+	
+			font-size: 1.2rem;
+		}
+	}
+}
 
-		font-size: 1.2rem;
+.reviews-specs{
+
+	.header{
+
+		display: flex;
+		justify-content: space-around;
+
+		height: 35px;
+
+		border: solid 2px;
+		margin: 0 250px;
+
+		.reviews-title{background-color: #d9d9d9;}
+
+		.reviews-title, .specs-title{
+		
+			flex: 1 1 auto;
+
+			display: flex;
+			justify-content: center;
+			align-items: center;
+
+			cursor: pointer;
+
+			&:hover{background-color: #d9d9d9;}
+		}
+
+		.line{
+
+			background-color: black;
+			width: 2px;
+			align-self: stretch;
+		}
+	}
+
+	.reviews, .specs{
+
+		margin: 0 250px;
+		border: solid 2px;
+		border-top: none;
+
+		padding-top: 20px;
+
+		.review{
+			
+			margin: 10px;
+			border: solid 2px;
+			padding: 10px;
+
+			.title{
+
+				display: flex;
+				align-items: center;
+
+				margin-bottom: 10px;
+
+				.star-rating{
+				
+					margin-left: 10px;
+					color: gold;
+				}
+			}
+		}
+	}
+
+	.specs{
+
+		display: none;
 	}
 }

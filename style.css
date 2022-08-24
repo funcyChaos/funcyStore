@@ -482,9 +482,60 @@
 }
 .single-product-grid .description {
   grid-area: description;
+}
+.single-product-grid .description .description-wrapper {
   width: 70%;
   margin-top: 35px;
   font-size: 1.2rem;
+}
+
+.reviews-specs .header {
+  display: flex;
+  justify-content: space-around;
+  height: 35px;
+  border: solid 2px;
+  margin: 0 250px;
+}
+.reviews-specs .header .reviews-title {
+  background-color: #d9d9d9;
+}
+.reviews-specs .header .reviews-title, .reviews-specs .header .specs-title {
+  flex: 1 1 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.reviews-specs .header .reviews-title:hover, .reviews-specs .header .specs-title:hover {
+  background-color: #d9d9d9;
+}
+.reviews-specs .header .line {
+  background-color: black;
+  width: 2px;
+  align-self: stretch;
+}
+.reviews-specs .reviews, .reviews-specs .specs {
+  margin: 0 250px;
+  border: solid 2px;
+  border-top: none;
+  padding-top: 20px;
+}
+.reviews-specs .reviews .review, .reviews-specs .specs .review {
+  margin: 10px;
+  border: solid 2px;
+  padding: 10px;
+}
+.reviews-specs .reviews .review .title, .reviews-specs .specs .review .title {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.reviews-specs .reviews .review .title .star-rating, .reviews-specs .specs .review .title .star-rating {
+  margin-left: 10px;
+  color: gold;
+}
+.reviews-specs .specs {
+  display: none;
 }
 
 .footer {
