@@ -496,7 +496,7 @@
   border: solid 2px;
   margin: 0 250px;
 }
-.reviews-specs .header .reviews-title {
+.reviews-specs .header .active {
   background-color: #d9d9d9;
 }
 .reviews-specs .header .reviews-title, .reviews-specs .header .specs-title {
@@ -536,6 +536,7 @@
 }
 .reviews-specs .specs {
   display: none;
+  padding: 20px;
 }
 
 .footer {

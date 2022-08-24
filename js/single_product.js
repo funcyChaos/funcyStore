@@ -43,20 +43,20 @@ qtyCount.addEventListener('input', ()=>{
 // reviews and specs functionality
 reviewsTitle.addEventListener('click', ()=>{
 
-	specsSect.style.display							= 'none';
-	specsTitle.style.backgroundColor		= 'white';
+	specsSect.style.display = 'none';
+	specsTitle.classList.remove('active');
 
-	reviewsSect.style.display						= 'block';
-	reviewsTitle.style.backgroundColor	= '#d9d9d9';
+	reviewsSect.style.display = 'block';
+	reviewsTitle.classList.add('active');
 });
 
 specsTitle.addEventListener('click', ()=>{
 
-	reviewsSect.style.display	= 'none';
-	reviewsTitle.style.backgroundColor	= 'white';
+	reviewsSect.style.display = 'none';
+	reviewsTitle.classList.remove('active');
 
-	specsSect.style.display		= 'block';
-	specsTitle.style.backgroundColor	= '#d9d9d9';
+	specsSect.style.display = 'block';
+	specsTitle.classList.add('active');
 });
 
 // Preview top adjust
