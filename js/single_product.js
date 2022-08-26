@@ -7,7 +7,9 @@ const qtyCount 				= document.getElementById('qty_count');
 const reviewsTitle 		= document.getElementById('reviews_title');
 const specsTitle 			= document.getElementById('specs_title');
 const reviewsSect			= document.getElementById('reviews_sect');
+const reviewsInner		= document.getElementById('reviews_inner');
 const specsSect				= document.getElementById('specs_sect');
+const specsInner			= document.getElementById('specs_inner');
 
 // second preview fade in
 document.addEventListener('scroll', (e)=>{
@@ -60,11 +62,13 @@ specsTitle.addEventListener('click', ()=>{
 });
 
 // Preview top adjust
-if((window.innerHeight - (nav + 20)) > previewElement.offsetHeight){
-
+if((window.innerHeight - (nav + 20)) > previewElement.offsetHeight)
 	previewElement.style.top = `${nav + 10}px`;
-}else{
-
+else{
 	previewElement.style.top = `${-(previewElement.offsetHeight - window.innerHeight + 30)}px`;
 }
 
+if(reviewsInner.clientHeight > specsInner.clientHeight)
+	specsInner.style.height = `${reviewsInner.clientHeight}px`;
+else
+	reviewsInner.style.height = `${specsInner.clientHeight}px`;

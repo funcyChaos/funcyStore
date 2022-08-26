@@ -5,5 +5,6 @@
 			"cmd": "sass ./sass/style.scss ./style.css",
 			"silent": true
 		}]
-	}
+	},
+	"liveServer.settings.port": 5501
 }
