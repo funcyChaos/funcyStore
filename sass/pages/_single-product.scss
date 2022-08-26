@@ -58,12 +58,48 @@
 	
 				aspect-ratio: 4 / 3;
 				background-color: #d9d9d9;
+
+				display: flex;
+				align-items: center;
+
+				img{
+
+					width: 100%;
+					height: auto;
+				}
 			}
 	
 			.thumbnails{
 	
 				height: 100px;
 				background-color: #555;
+
+				display: flex;
+				overflow-x: scroll;
+				scrollbar-width: none;
+
+				&::-webkit-scrollbar{display: none;}
+
+				.thumb{
+
+					height: 100px;
+					aspect-ratio: 1 / 1;
+
+					// border: 1px solid;
+					// padding: 2px;
+
+					// overflow: hidden;
+
+					img{
+
+						width: 100%;
+						height: auto;
+
+						opacity: .5;
+
+						cursor: pointer;
+					}
+				}
 			}
 	
 			.preview-2{
