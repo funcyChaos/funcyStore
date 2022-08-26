@@ -61,14 +61,28 @@ specsTitle.addEventListener('click', ()=>{
 	specsTitle.classList.add('active');
 });
 
-// Preview top adjust
-if((window.innerHeight - (nav + 20)) > previewElement.offsetHeight)
-	previewElement.style.top = `${nav + 10}px`;
-else{
-	previewElement.style.top = `${-(previewElement.offsetHeight - window.innerHeight + 15)}px`;
-}
+window.addEventListener('resize', ()=>pageInit());
 
-if(reviewsInner.clientHeight > specsInner.clientHeight)
-	specsInner.style.height = `${reviewsInner.clientHeight}px`;
-else
-	reviewsInner.style.height = `${specsInner.clientHeight}px`;
+pageInit();
+
+function pageInit(){
+
+	// Preview top adjust
+	if((window.innerHeight - (nav + 20)) > previewElement.offsetHeight)
+		previewElement.style.top = `${nav + 10}px`;
+	else{
+		previewElement.style.top = `${-(previewElement.offsetHeight - window.innerHeight + 15)}px`;
+	}
+	
+	// add more debug code in here, something is changing too much.
+	// pay attention to the values
+
+	if(reviewsInner.clientHeight > specsInner.clientHeight){
+		specsInner.style.height = `${reviewsInner.clientHeight}px`;
+		console.log(`specs: ${specsInner.clientHeight} revs: ${reviewsInner.clientHeight} bigger: reviews`);
+	}
+	else{
+		reviewsInner.style.height = `${specsInner.clientHeight}px`;
+		console.log(`specs: ${specsInner.clientHeight} revs: ${reviewsInner.clientHeight} bigger: specs`);
+	}
+}
