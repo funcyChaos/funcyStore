@@ -10,6 +10,7 @@ const reviewsSect			= document.getElementById('reviews_sect');
 const reviewsInner		= document.getElementById('reviews_inner');
 const specsSect				= document.getElementById('specs_sect');
 const specsInner			= document.getElementById('specs_inner');
+let		specsDisp				= false;
 
 // second preview fade in
 document.addEventListener('scroll', (e)=>{
@@ -47,6 +48,7 @@ reviewsTitle.addEventListener('click', ()=>{
 
 	specsSect.style.display = 'none';
 	specsTitle.classList.remove('active');
+	specsDisp = false;
 
 	reviewsSect.style.display = 'block';
 	reviewsTitle.classList.add('active');
@@ -59,7 +61,9 @@ specsTitle.addEventListener('click', ()=>{
 
 	specsSect.style.display = 'block';
 	specsTitle.classList.add('active');
+	specsDisp = true;
 });
+
 
 window.addEventListener('resize', ()=>pageInit());
 
@@ -73,15 +77,35 @@ function pageInit(){
 	else{
 		previewElement.style.top = `${-(previewElement.offsetHeight - window.innerHeight + 15)}px`;
 	}
-	
-	// add more debug code in here, something is changing too much.
-	// pay attention to the values
 
+	// adjust reviews and specs area
+	if(!specsDisp){
+
+		specsSect.style.display = 'block';
+		check_rev_specSectsHeight();
+		specsSect.style.display = 'none';
+
+	}else{
+
+		reviewsSect.style.display = 'block';
+		check_rev_specSectsHeight();
+		reviewsSect.style.display = 'none';
+	}
+
+}
+
+function check_rev_specSectsHeight(){
+
+	specsInner.style.height 	= 'initial';
+	reviewsInner.style.height = 'initial';
+	
 	if(reviewsInner.clientHeight > specsInner.clientHeight){
+		
 		specsInner.style.height = `${reviewsInner.clientHeight}px`;
 		console.log(`specs: ${specsInner.clientHeight} revs: ${reviewsInner.clientHeight} bigger: reviews`);
-	}
-	else{
+
+	}else{
+	
 		reviewsInner.style.height = `${specsInner.clientHeight}px`;
 		console.log(`specs: ${specsInner.clientHeight} revs: ${reviewsInner.clientHeight} bigger: specs`);
 	}
