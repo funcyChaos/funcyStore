@@ -74,10 +74,10 @@
 				background-color: #555;
 
 				display: flex;
-				overflow-x: scroll;
-				scrollbar-width: none;
+				// overflow-x: scroll;
+				// scrollbar-width: none;
 
-				&::-webkit-scrollbar{display: none;}
+				// &::-webkit-scrollbar{display: none;}
 
 				.thumb{
 

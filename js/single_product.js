@@ -1,6 +1,8 @@
 const nav 						= document.getElementById('navbar').offsetHeight
 const previewElement	= document.getElementById('preview_element');
+const preview1 				= document.getElementById('preview_1');
 const preview2 				= document.getElementById('preview_2');
+const thumbs					= document.getElementById('preview_thumbs');
 const qtyMinus 				= document.getElementById('qty_minus');
 const qtyPlus 				= document.getElementById('qty_plus');
 const qtyCount 				= document.getElementById('qty_count');
@@ -21,6 +23,21 @@ document.addEventListener('scroll', (e)=>{
 	if(scroll === 0){preview2.style.opacity = 0;}
 	else{preview2.style.opacity = scroll / fadeLength;}
 });
+
+for(const thumb of thumbs.children){
+
+	thumb.addEventListener('click', ()=>{
+
+		console.log(thumb.getElementsByTagName('img')[0].src)
+		const prevImg1 = preview1.getElementsByTagName('img')[0];
+		const prevImg2 = preview2.getElementsByTagName('img')[0];
+
+		prevImg1.src = thumb.getElementsByTagName('img')[0].src;
+		prevImg2.src = thumb.nextElementSibling.getElementsByTagName('img')[0].src;
+
+		console.log(thumb.nextElementSibling)
+	});
+}
 
 // Quantity functionality
 qtyMinus.addEventListener('click', ()=>{
@@ -102,11 +119,11 @@ function check_rev_specSectsHeight(){
 	if(reviewsInner.clientHeight > specsInner.clientHeight){
 		
 		specsInner.style.height = `${reviewsInner.clientHeight}px`;
-		console.log(`specs: ${specsInner.clientHeight} revs: ${reviewsInner.clientHeight} bigger: reviews`);
+		// console.log(`specs: ${specsInner.clientHeight} revs: ${reviewsInner.clientHeight} bigger: reviews`);
 
 	}else{
 	
 		reviewsInner.style.height = `${specsInner.clientHeight}px`;
-		console.log(`specs: ${specsInner.clientHeight} revs: ${reviewsInner.clientHeight} bigger: specs`);
+		// console.log(`specs: ${specsInner.clientHeight} revs: ${reviewsInner.clientHeight} bigger: specs`);
 	}
 }
