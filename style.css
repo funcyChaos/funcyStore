@@ -397,6 +397,7 @@
   background-color: #555;
   display: flex;
   overflow-x: scroll;
+  overflow-y: hidden;
   scrollbar-width: none;
 }
 .single-product-grid .left-column .preview-wrapper .thumbnails::-webkit-scrollbar {
