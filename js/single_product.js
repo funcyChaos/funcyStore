@@ -24,18 +24,22 @@ document.addEventListener('scroll', (e)=>{
 	else{preview2.style.opacity = scroll / fadeLength;}
 });
 
+// Thumbnail selection functionality
 for(const thumb of thumbs.children){
 
 	thumb.addEventListener('click', ()=>{
 
-		console.log(thumb.getElementsByTagName('img')[0].src)
-		const prevImg1 = preview1.getElementsByTagName('img')[0];
-		const prevImg2 = preview2.getElementsByTagName('img')[0];
+		const prevImg1	= preview1.getElementsByTagName('img')[0];
+		const prevImg2	= preview2.getElementsByTagName('img')[0];
+		const thumbImg	= thumb.getElementsByTagName('img')[0];
+		const nextThumb	= thumb.nextElementSibling 
+		?
+			thumb.nextElementSibling.getElementsByTagName('img')[0]
+		:
+			thumbs.children[0].getElementsByTagName('img')[0];
 
-		prevImg1.src = thumb.getElementsByTagName('img')[0].src;
-		prevImg2.src = thumb.nextElementSibling.getElementsByTagName('img')[0].src;
-
-		console.log(thumb.nextElementSibling)
+		prevImg1.src = thumbImg.src;
+		prevImg2.src = nextThumb.src
 	});
 }
 
