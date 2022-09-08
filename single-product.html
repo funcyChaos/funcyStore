@@ -142,8 +142,18 @@
 				<h1>iFlight Protek35 Cinewhoop Analog Drone</h1>
 			</div>
 			<div class="cart">
-				<div class="cart-inner">
-					<form action="./single-product.html">
+				<form action="./single-product.html" class="row">
+					<div class="options col-12">
+						<select name="transmitter" id="tx_select">
+							<option value="analog-tbs">Analog TBS</option>
+							<option value="analog-other">Analog Other</option>
+						</select>
+						<select name="reciever" id="rx_select">
+							<option value="tbs-crossfire">TBS Crossfire</option>
+							<option value="frsky">FrSky</option>
+						</select>
+					</div>
+					<div class="col-12 cart-general">
 						<div class="quantity">
 							<i class="fas fa-minus" id="qty_minus"></i>
 							<input type="number" name="quantity" value="1" id="qty_count"></input>
