@@ -493,11 +493,16 @@
   margin-left: 10px;
 }
 .single-product-grid .cart .cart-inner .ratings .star-rating {
-  color: gold;
-  width: 92.5308px;
-  overflow: hidden;
-  white-space: nowrap;
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
   margin-right: 10px;
+  color: gold;
+}
+.single-product-grid .cart .cart-inner .ratings .star-rating .rating {
+  position: absolute;
+  height: 100%;
+  background-color: white;
 }
 .single-product-grid .cart .cart-inner .ratings h5 {
   color: black;

@@ -204,20 +204,27 @@
 	
 				display: flex;
 				align-items: center;
-	
-				margin-left: 10px;
-	
-				.star-rating{
-	
-					$stars: 102.812px;
 
-					color: gold;
-	
-					width: calc($stars * .9);
-					overflow: hidden;
-					white-space: nowrap;
-	
+				
+				margin-left: 10px;
+				
+				.star-rating{
+
+					display: flex;
+					justify-content: flex-end;
+					
+					position: relative;
 					margin-right: 10px;
+					
+					color: gold;
+
+					.rating{
+
+						position: absolute;
+						height: 100%;
+
+						background-color: white;
+					}
 				}
 	
 				h5{color: black;}

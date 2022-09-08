@@ -1,4 +1,3 @@
-const nav 						= document.getElementById('navbar').offsetHeight
 const previewElement	= document.getElementById('preview_element');
 const preview1 				= document.getElementById('preview_1');
 const preview2 				= document.getElementById('preview_2');
@@ -92,13 +91,14 @@ pageInit();
 
 function pageInit(){
 
+	const nav = document.getElementById('navbar').offsetHeight;
+
 	// Preview top adjust
 	if((window.innerHeight - (nav + 20)) > previewElement.offsetHeight)
 		previewElement.style.top = `${nav + 10}px`;
-	else{
+	else
 		previewElement.style.top = `${-(previewElement.offsetHeight - window.innerHeight + 15)}px`;
-	}
-
+	
 	// adjust reviews and specs area
 	if(!specsDisp){
 
@@ -120,14 +120,8 @@ function check_rev_specSectsHeight(){
 	specsInner.style.height 	= 'initial';
 	reviewsInner.style.height = 'initial';
 	
-	if(reviewsInner.clientHeight > specsInner.clientHeight){
-		
+	if(reviewsInner.clientHeight > specsInner.clientHeight)
 		specsInner.style.height = `${reviewsInner.clientHeight}px`;
-		// console.log(`specs: ${specsInner.clientHeight} revs: ${reviewsInner.clientHeight} bigger: reviews`);
-
-	}else{
-	
+	else
 		reviewsInner.style.height = `${specsInner.clientHeight}px`;
-		// console.log(`specs: ${specsInner.clientHeight} revs: ${reviewsInner.clientHeight} bigger: specs`);
-	}
 }
