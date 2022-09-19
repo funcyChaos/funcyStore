@@ -11,7 +11,7 @@ const reviewsSect			= document.getElementById('reviews_sect');
 const reviewsInner		= document.getElementById('reviews_inner');
 const specsSect				= document.getElementById('specs_sect');
 const specsInner			= document.getElementById('specs_inner');
-let		specsDisp				= false;
+let		specsDisp				= true;
 
 // second preview fade in
 document.addEventListener('scroll', (e)=>{

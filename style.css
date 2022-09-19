@@ -522,54 +522,50 @@
   font-size: 1.2rem;
 }
 
-.reviews-specs .header {
+.specs-reviews .header {
   display: flex;
   justify-content: space-around;
   height: 35px;
   border: solid 2px;
   margin: 0 250px;
 }
-.reviews-specs .header .active {
+.specs-reviews .header .active {
   background-color: #d9d9d9;
 }
-.reviews-specs .header .reviews-title, .reviews-specs .header .specs-title {
+.specs-reviews .header .reviews-title, .specs-reviews .header .specs-title {
   flex: 1 1 auto;
   display: flex;
   justify-content: center;
   align-items: center;
   cursor: pointer;
 }
-.reviews-specs .header .reviews-title:hover, .reviews-specs .header .specs-title:hover {
+.specs-reviews .header .reviews-title:hover, .specs-reviews .header .specs-title:hover {
   background-color: #d9d9d9;
 }
-.reviews-specs .header .line {
+.specs-reviews .header .line {
   background-color: black;
   width: 2px;
   align-self: stretch;
 }
-.reviews-specs .reviews, .reviews-specs .specs {
+.specs-reviews .reviews, .specs-reviews .specs {
   margin: 0 250px;
   border: solid 2px;
   border-top: none;
   padding-top: 20px;
 }
-.reviews-specs .reviews .review, .reviews-specs .specs .review {
+.specs-reviews .reviews .review, .specs-reviews .specs .review {
   margin: 10px;
   border: solid 2px;
   padding: 10px;
 }
-.reviews-specs .reviews .review .title, .reviews-specs .specs .review .title {
+.specs-reviews .reviews .review .title, .specs-reviews .specs .review .title {
   display: flex;
   align-items: center;
   margin-bottom: 10px;
 }
-.reviews-specs .reviews .review .title .star-rating, .reviews-specs .specs .review .title .star-rating {
+.specs-reviews .reviews .review .title .star-rating, .specs-reviews .specs .review .title .star-rating {
   margin-left: 10px;
   color: gold;
-}
-.reviews-specs .specs {
-  display: none;
-  padding: 20px;
 }
 
 .footer {
