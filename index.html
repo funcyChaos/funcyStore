@@ -17,6 +17,9 @@
 				<a href="">
 					<h1 id="main_title">funcyStore</h1>
 				</a>
+				<a href="" class="blog">
+					<h4 id="blog_word">Blog</h4>
+				</a>
 			</div>
 			<div class="nav_search" id="nav_search_container">
 				<form id="search_bar_form" action="/" method="get">
@@ -33,6 +36,7 @@
 			</div>
 			<script src="./js/nav/nav_search_dropdown.js"></script>
 			<div class="account_nav">
+				<a id="blog_icon" href=""><i class="fab fa-blogger-b fa-lg"></i></a>
 				<a href="">
 					<i id="signin_icon" class="fas fa-user fa-lg"></i>
 					<h3 id="signin_words">Sign In</h3>
@@ -46,32 +50,24 @@
 					<h3 id="cart_word">&nbspCart</h3>
 				</a>
 			</div>
-			<div class="nav_links">
-				<div class="categories">
-					<a onclick="cats_open(event)" id="cat_bar_all" href=""><i class="fas fa-bars"> All</i></a>
-					<a href="">Keyboards</a>
-					<a href="">Drones</a>
-					<a href="">Stash Storage</a>
-					<a href="">Car Parts</a>
-					<a href="">Keyboards</a>
-					<a href="">Drones</a>
-					<a href="">Stash Storage</a>
-					<a href="">Car Parts</a>
-					<a href="">Keyboards</a>
-					<a href="">Drones</a>
-					<a href="">Stash Storage</a>
-					<a href="">Car Parts</a>
-					<a href="">Keyboards</a>
-					<a href="">Drones</a>
-					<a href="">Stash Storage</a>
-					<a href="">Car Parts</a>
-				</div>
-				<div class="line"></div>
-				<div class="site_nav">
-					<a href="">Blog</a>
-					<a href="">About</a>
-					<a href="">Contact</a>
-				</div>
+			<div class="categories">
+				<a onclick="cats_open(event)" id="cat_bar_all" href=""><i class="fas fa-bars"> All</i></a>
+				<a href="">Keyboards</a>
+				<a href="">Drones</a>
+				<a href="">Stash Storage</a>
+				<a href="">Car Parts</a>
+				<a href="">Keyboards</a>
+				<a href="">Drones</a>
+				<a href="">Stash Storage</a>
+				<a href="">Car Parts</a>
+				<a href="">Keyboards</a>
+				<a href="">Drones</a>
+				<a href="">Stash Storage</a>
+				<a href="">Car Parts</a>
+				<a href="">Keyboards</a>
+				<a href="">Drones</a>
+				<a href="">Stash Storage</a>
+				<a href="">Car Parts</a>
 			</div>
 		</header>
 		<div class="cats-overlay" id="cats_overlay"></div>
@@ -96,8 +92,7 @@
 		</div>
 		<script src="./js/nav/all_cats.js"></script>
 
-		<div class="container home-product-hero">
-
+		<div class="home-product-hero">
 			<div class="hero-carousel">
 				<div id="prod_car_left" class="car-left"><i class="fas fa-angle-left"></i></div>
 				<div class="carousel-inner">
@@ -140,14 +135,14 @@
 
 			<div class="product-cards">
 				<div class="product-hero-card">
-					<a href="">
-						<h3>Ultimate Stash Storage</h3>
+					<a href="./single-product.html">
+						<h3>BNF Freestyle Drones</h3>
 						<div class="product-image"></div>
 					</a>
 				</div>
 				<div class="product-hero-card">
 					<a href="">
-						<h3>BNF Freestyle Drones</h3>
+						<h3>Ultimate Stash Storage</h3>
 						<div class="product-image"></div>
 					</a>
 				</div>
@@ -167,6 +162,57 @@
 				</div>
 			</div>
 		</div>
+
+		<div class="spacer">
+
+		</div>
+
+		<footer class="footer">
+			<div class="top">
+				<h2>Sign Up For Funcy News!</h2>
+				<p>Join our email list to get updates on new products, product tutorials, and product stories :D</p>
+				<div id="footer_newsletter_image" class="newsletter-image">
+
+				</div>
+				<a href="" class="button">Sign Up!</a>
+			</div>
+
+			<div class="bottom">
+				<div class="column">
+					<a href="">
+						<h2>Support</h2>
+					</a>
+					<a href="">Returns</a>
+					<a href="">Order Tracking</a>
+					<a href="">Shipping</a>
+					<a href="">Support Ticket</a>
+				</div>
+				<div class="column">
+					<a href="">
+						<h2>Blog</h2>
+					</a>
+					<a href="">Instructional</a>
+					<a href="">Product Uses</a>
+					<a href="">Latest Posts</a>
+				</div>
+				<div class="column">
+					<a href="">
+						<h2>About</h2>
+					</a>
+					<a href="">About Us</a>
+					<a href="">Mission Statement</a>
+					<a href="">Customer Reviews</a>
+				</div>
+				<div class="column">
+					<a href="">
+						<h2>Contact</h2>
+					</a>
+					<a href="">Email</a>
+					<a href="">Phone</a>
+					<a href="">Contact Form</a>
+				</div>
+			</div>
+		</footer>
 
 		<script src="https://kit.fontawesome.com/aebdbe8212.js" crossorigin="anonymous"></script>
 	</body>

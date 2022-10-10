@@ -6,7 +6,18 @@ $secondary: #d9d9d9;
 // aux1
 $aux1: white;
 // aux2
+$aux2fix: #555;
+// aux3
 $aux2: #000a;
 
 $small_breakpoint: 600px;
 $large_breakpoint: 1200px;
+
+$nav_row_1: 61px;
+$nav_row_2: 36px;
+$nav_total: $nav_row_1 + $nav_row_2;
+
+$nav_mobi_row_1: 40px;
+$nav_mobi_row_2: 50px;
+$nav_mobi_row_3: $nav_mobi_row_1;
+$nav_mobi_total: $nav_mobi_row_1 + $nav_mobi_row_2 + $nav_mobi_row_3;

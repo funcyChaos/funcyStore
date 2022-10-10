@@ -1,89 +1,30 @@
 @use "../variables";
+@use "../mixins";
 
 $width: 180px;
 
-@mixin aTagDefaults{
-	
-	color: variables.$primary;
-	text-decoration: none;
-}
-
-// *******************************
-// all-categories overlay
-
-.all-categories{
-
-	display: flex;
-	flex-direction: column;
-
-	position: absolute;
-	z-index: 10;
-	top: 0;
-	bottom: 0;
-	left: -$width;
-	width: $width;
-	transition: .1s;
-
-	padding: 100px 0;
-
-	background-color: variables.$secondary;
-
-	a{
-
-		margin: 5px 40px;
-		@include aTagDefaults();
-
-		&:first-of-type{
-
-			position: absolute;
-
-			right: 0;
-			top: 0;
-
-			margin: 30px 20px;
-		}
-	}
-
-}
-
-.cats-overlay{
-
-	position: absolute;
-	z-index: 10;
-	top: 0;
-	bottom: 0;
-	left: -100%;
-	width: 100%;
-	transition: .1s;
-
-	background-color: variables.$aux2;
-}
-
-// end all-categories overlay
-// *******************************
-
 .nav{
 
-	/*
-		Setup baseline grid for most desktops and laptops
-	*/
+	position: sticky;
+	top: 0;
+	z-index: 10;
+
+	// Setup baseline grid for most desktops and laptops
 
 	display: grid;
 	grid-template-columns: 1fr 4fr 2fr;
-	grid-template-rows: 61px 36px;
+	grid-template-rows: variables.$nav_row_1 variables.$nav_row_2;
 
-	grid-template-areas: 
+	grid-template-areas:
 		"title search account"
-		"nav nav nav"
+		"cats cats cats"
 	;
 
-	/*
-		Main changes to grid at the large breakpoint
-	*/
+	// Main changes to grid at the large breakpoint
 
 	@media(max-width: variables.$large_breakpoint){
 
-		grid-template-columns: 1fr 1fr;
+		grid-template-columns: 1fr 2fr;
 		grid-template-rows: 40px 50px 40px;
 
 		grid-template-areas:
@@ -91,17 +32,13 @@ $width: 180px;
 			"search search"
 			"cats cats"
 		;
-
-		padding: 5px 10px 0 10px;
 	}
 
 	background-color: variables.$primary;
 	color: variables.$aux1;
 
 	// *******************************
-	/*
-		Title and Logo area
-	*/
+	// Title and Logo area
 
 	.title{
 
@@ -109,50 +46,42 @@ $width: 180px;
 
 		display: flex;
 		align-items: center;
-
+		justify-content: space-between;
+		
 		padding-left: 10px;
 		letter-spacing: 1px;
-
-		#cat_mobi_all{
-
-			display: none;
-
-			margin-right: 20px;
-			margin-left: 5px;
-		}
 		
-		@media(max-width: variables.$large_breakpoint){
-
-			grid-area: topl;
-			padding: 0;
-
-			#main_title{
-
-				font-size: 1.2em;
-			}
-
-			#cat_mobi_all{
-
-				display: block;
-			}
-		}
-
 		a{
 
 			color: variables.$aux1;
 			text-decoration: none;
 		}
+
+		.blog{margin-left: 20px;}
+
+		#cat_mobi_all{
+
+			display: none;
+
+			margin-right: 5px;
+		}
+		
+		@media(max-width: variables.$large_breakpoint){
+
+			grid-area: topl;
+
+			#main_title{font-size: 1.2em;}
+
+			#cat_mobi_all, #blog_icon{display: block;}
+			#blog_word{display: none;}
+		}
 	}
 
-	/*
-		end Title and Logo area
-	*/
+	// end Title and Logo area
 	// *******************************
 
 	// *******************************
-	/*
-		Search form in the navbar area
-	*/
+	// Search form in the navbar area
 
 	.nav_search{
 
@@ -169,10 +98,7 @@ $width: 180px;
 			width: 95%;
 			height: 70%;
 
-			@media(max-width: variables.$large_breakpoint){
-
-				width: 100%;
-			}
+			@media(max-width: variables.$large_breakpoint){width: 100%;}
 			
 			background-color: variables.$aux1;
 			color: variables.$primary;
@@ -180,9 +106,7 @@ $width: 180px;
 			$border-radius: .5rem;
 			border-radius: $border-radius;
 
-			/*
-				This is where we make the search components
-			*/
+			// This is where we make the search components
 			
 			.search_dropdown{
 
@@ -195,10 +119,7 @@ $width: 180px;
 				border-top-left-radius: $border-radius;
 				border-bottom-left-radius: $border-radius;
 
-				@media(max-width: variables.$small_breakpoint){
-
-					display: none;
-				}
+				@media(max-width: variables.$small_breakpoint){display: none;}
 			}
 			
 			input{
@@ -231,17 +152,15 @@ $width: 180px;
 				border-bottom-left-radius: 0;
 			}
 		}
+
+		@media(max-width: variables.$large_breakpoint){padding: 0 10px;}
 	}
 
-	/*
-		end Search form in the navbar area
-	*/
+	// end Search form in the navbar area
 	// *******************************
 
 	// *******************************
-	/*
-		Account navigation, account, orders, cart
-	*/
+	// Account navigation, account, orders, cart
 
 	.account_nav{
 
@@ -253,7 +172,7 @@ $width: 180px;
 
 		margin-right: 20px;
 
-		&>a{
+		a{
 
 			display: flex;
 			color: variables.$aux1;
@@ -261,150 +180,115 @@ $width: 180px;
 			white-space: nowrap;
 		}
 
-		#orders_icon{
+		// a:hover{
 
-			display: none;
-		}
+		// 	text-decoration: underline;
+		// }
 
-		#signin_icon{
-
-			display: none;
-		}
+		#blog_icon, #orders_icon, #signin_icon{display: none;}
 
 		@media(max-width: variables.$large_breakpoint){
 
 			grid-area: topr;
 
-			#signin_words, #orders_words, #cart_word{
-
-				display: none;
-			}
+			#signin_words, #orders_words, #cart_word{display: none;}
 			
-			#orders_icon, #signin_icon{
-				
-				display: block;
-			}
+			#blog_icon, #orders_icon, #signin_icon{display: block;}
 		}
 	}
 
-	/*
-		end Account navigation
-	*/
+	// end Account navigation 
 	// *******************************
 
 	// *******************************
-	/*
-		Site navigation, categories and general (blog, about, contact)
-	*/
+	// categories navigation
 
-	.nav_links{
+	.categories{
 
-		grid-area: nav;
-
-		@media(max-width: variables.$large_breakpoint){
-
-			grid-area: cats;
-		}
-
-		display: flex;
-		justify-content: space-between;
+		grid-area: cats;
 
 		background-color: variables.$secondary;
 		color: variables.$primary;
 
-		.categories, .site_nav{
-
-			display: flex;
-			align-items: center;
-			flex: 1 0 40vw;
-			width: 40vw;
-			
-			a{
-				
-				white-space: nowrap;
-				margin-right: 20px;
-				color: variables.$primary;
-				text-decoration: none;
-
-				&:first-of-type{
-
-					margin-left: 20px;
-				}
-			}
-			
-			@media(max-width: variables.$large_breakpoint){
-	
-				background-color: variables.$primary;
-				color: variables.$aux1;
-
-				a{
-
-					color: variables.$aux1;
-				}
-
-			}
-		}
-
-		.categories{
-
-			overflow-x: scroll;
-			scrollbar-width: none;
-
-			&::-webkit-scrollbar{
-
-				display: none;
-			}
-
-
-			@media(max-width: variables.$large_breakpoint){
-
-				#cat_bar_all{
-
-					display: none;
-				}
-			}
-		}
+		display: flex;
+		align-items: center;
+		width: 100%;
 		
-		@media(max-width: variables.$small_breakpoint){
+		a{
+			
+			white-space: nowrap;
+			margin-right: 20px;
+			@include mixins.aTagDefaults;
 
-			.site_nav{
-	
-				justify-content: flex-end;
+			&:first-of-type{margin-left: 20px;}
 
-				flex: 1 1;
-
-				a{
-
-					margin-right: 10px;
-				}
-
-				@media(max-width: variables.$small_breakpoint){
-
-					display: none;
-				}
-			}
+			@media(max-width: variables.$large_breakpoint){&:nth-child(2){margin-left: 10px;}}
 		}
 
-		.line{
+		overflow-x: scroll;
+		scrollbar-width: none;
 
-			background-color: variables.$primary;
-			width: 8px;
+		&::-webkit-scrollbar{display: none;}
 
-			@media(max-width: variables.$large_breakpoint){
+		@media(max-width: variables.$large_breakpoint){#cat_bar_all{display: none;}}
+	}
 
-				background-color: variables.$aux1;	
-			}
+	// end categories navigation
+	// *******************************
+}
 
-			@media(max-width: variables.$small_breakpoint){
+// *******************************
+// all-categories overlay
 
-				display: none;
+.all-categories{
 
-			}
+	display: flex;
+	flex-direction: column;
+
+	position: absolute;
+	z-index: 20;
+	top: 0;
+	bottom: 0;
+	left: -$width;
+	width: $width;
+	transition: .1s;
+
+	overflow-y: scroll;
+
+	padding: 100px 0;
+
+	background-color: variables.$secondary;
+
+	a{
+
+		margin: 5px 40px;
+		@include mixins.aTagDefaults;
+
+		&:first-of-type{
+
+			position: absolute;
+
+			right: 0;
+			top: 0;
+
+			margin: 30px 20px;
 		}
 	}
 
-	/*
-		end Site navigation
-	*/
-	// *******************************
 }
+
+.cats-overlay{
+
+	position: absolute;
+	z-index: 10;
+	top: 0;
+	bottom: 0;
+	left: -100%;
+	width: 100%;
+	transition: .1s;
+
+	background-color: variables.$aux2;
+}
+
+// end all-categories overlay
+// *******************************

@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<link rel="stylesheet" href="./bootstrap-grid.css">
+		<link rel="stylesheet" href="./style.css">
+		
+		<title>funcyStore.com</title>
+	</head>
+	<body>
+		<header class="nav" id="navbar">
+			<div class="title">
+				<a onclick="cats_open(event)" id="cat_mobi_all" href=""><i class="fas fa-bars"></i></a>
+				<a href="./index.html">
+					<h1 id="main_title">funcyStore</h1>
+				</a>
+				<a href="" class="blog">
+					<h4 id="blog_word">Blog</h4>
+				</a>
+			</div>
+			<div class="nav_search" id="nav_search_container">
+				<form id="search_bar_form" action="/" method="get">
+					<select class="search_dropdown" name="category" id="search_category_select">
+						<option value="All">All</option>
+						<option value="Keyboards">Keyboards</option>
+						<option value="Drones">Drones</option>
+						<option value="Stash Storage">Stash Storage</option>
+						<option value="Car Parts">Car Parts</option>
+					</select>
+					<input type="text" name="search" id="nav_search">
+					<button class="search_go"><i class="fas fa-search fa-lg"></i></button>
+				</form>
+			</div>
+			<script src="./js/nav/nav_search_dropdown.js"></script>
+			<div class="account_nav">
+				<a id="blog_icon" href=""><i class="fab fa-blogger-b fa-lg"></i></a>
+				<a href="">
+					<i id="signin_icon" class="fas fa-user fa-lg"></i>
+					<h3 id="signin_words">Sign In</h3>
+				</a>
+				<a href="">
+					<i id="orders_icon" class="fas fa-book fa-lg"></i>
+					<h4 id="orders_words">Orders & Returns</h4>
+				</a>
+				<a href="">
+					<i class="fas fa-shopping-cart fa-lg"></i>
+					<h3 id="cart_word">&nbspCart</h3>
+				</a>
+			</div>
+			<div class="categories">
+				<a onclick="cats_open(event)" id="cat_bar_all" href=""><i class="fas fa-bars"> All</i></a>
+				<a href="">Keyboards</a>
+				<a href="">Drones</a>
+				<a href="">Stash Storage</a>
+				<a href="">Car Parts</a>
+				<a href="">Keyboards</a>
+				<a href="">Drones</a>
+				<a href="">Stash Storage</a>
+				<a href="">Car Parts</a>
+				<a href="">Keyboards</a>
+				<a href="">Drones</a>
+				<a href="">Stash Storage</a>
+				<a href="">Car Parts</a>
+				<a href="">Keyboards</a>
+				<a href="">Drones</a>
+				<a href="">Stash Storage</a>
+				<a href="">Car Parts</a>
+			</div>
+		</header>
+		<div class="cats-overlay" id="cats_overlay"></div>
+		<div class="all-categories" id="all_categories">
+			<a onclick="cats_close(event)" id="all_cats_close" href=""><i class="fas fa-times"></i></a>
+			<a href="">Keyboards</a>
+			<a href="">Drones</a>
+			<a href="">Stash Storage</a>
+			<a href="">Car Parts</a>
+			<a href="">Keyboards</a>
+			<a href="">Drones</a>
+			<a href="">Stash Storage</a>
+			<a href="">Car Parts</a>
+			<a href="">Keyboards</a>
+			<a href="">Drones</a>
+			<a href="">Stash Storage</a>
+			<a href="">Car Parts</a>
+			<a href="">Keyboards</a>
+			<a href="">Drones</a>
+			<a href="">Stash Storage</a>
+			<a href="">Car Parts</a>
+		</div>
+		<script src="./js/nav/all_cats.js"></script>
+
+		<div class="bread-crumbs">
+			<a href="">Drones</a>
+			<i class="fas fa-arrow-right"></i>
+			<a href="">PreBuilt</a>
+		</div>
+
+		<div class="single-product-grid">
+			<div class="left-column">
+				<div class="preview-wrapper" id="preview_element">
+					<div class="preview-1" id="preview_1">
+						<img src="./img/protek35-1.jpg" alt="" srcset="">
+					</div>
+					<div class="thumbnails" id="preview_thumbs">
+						<div class="thumb">
+							<img src="./img/protek35-1.jpg" alt="" srcset="">
+						</div>
+						<div class="thumb">
+							<img src="./img/protek35-2.jpg" alt="" srcset="">
+						</div>
+						<div class="thumb">
+							<img src="./img/protek35-3.jpg" alt="" srcset="">
+						</div>
+						<div class="thumb">
+							<img src="./img/protek35-1.jpg" alt="" srcset="">
+						</div>
+						<div class="thumb">
+							<img src="./img/protek35-2.jpg" alt="" srcset="">
+						</div>
+						<div class="thumb">
+							<img src="./img/protek35-3.jpg" alt="" srcset="">
+						</div>
+						<div class="thumb">
+							<img src="./img/protek35-1.jpg" alt="" srcset="">
+						</div>
+						<div class="thumb">
+							<img src="./img/protek35-2.jpg" alt="" srcset="">
+						</div>
+						<div class="thumb">
+							<img src="./img/protek35-3.jpg" alt="" srcset="">
+						</div>
+					</div>
+					<div class="preview-2" id="preview_2">
+						<img src="./img/protek35-2.jpg" alt="" srcset="">
+					</div>
+				</div>
+			</div>
+			<div class="title">
+				<h1>iFlight Protek35 Cinewhoop Analog Drone</h1>
+			</div>
+			<div class="cart">
+				<form action="./single-product.html" class="row">
+					<div class="options col-12">
+						<select name="transmitter" id="tx_select">
+							<option value="analog-tbs">Analog TBS</option>
+							<option value="analog-other">Analog Other</option>
+						</select>
+						<select name="reciever" id="rx_select">
+							<option value="tbs-crossfire">TBS Crossfire</option>
+							<option value="frsky">FrSky</option>
+						</select>
+					</div>
+					<div class="col-12 cart-general">
+						<div class="quantity">
+							<i class="fas fa-minus" id="qty_minus"></i>
+							<input type="number" name="quantity" value="1" id="qty_count"></input>
+							<i class="fas fa-plus" id="qty_plus"></i>
+						</div>
+						<button type="submit" class="add-to-cart">Add To Cart <i class="fas fa-cart-plus"></i></button>
+					</form>
+					<div class="ratings">
+						<div class="star-rating">
+							<div class="rating" style="width: 11%;"></div>
+							<i class="fas fa-star"></i>
+							<i class="fas fa-star"></i>
+							<i class="fas fa-star"></i>
+							<i class="fas fa-star"></i>
+							<i class="fas fa-star"></i>
+						</div>
+						<a href="">
+							<h5>10,000 ratings</h5>
+						</a>
+					</div>
+				</div>
+			</div>
+			<div class="description">
+				<div class="description-wrapper">
+					<p>
+						After our very popular 3inch Cinematic EVA bumper BumbleBee and Green Hornet CineWhoop series, we were trying to increase performance and reduce weight for an even better and longer flight experience for a wide variety of use. 
+	
+						Our all new																		 3.5inch project is finally ready for all you content creators or those guys who like to wear some protection every now and then. Prop protection is what we're talking about here... 
+	
+						ProTek is not necessarily just a Cinewhoop series but far more. Equipped with our all new 2205 motors for more power and less heat. We were able to increase speed and thrust by 50% compared to it's 3inch predecessor which gives a lot more room for a lot more fun. Our GPS measured maximum speed was above 120km/h and a maximum thrust of 750g per motor (3kg in total) would even carry heavier cams than a Gopro but also do some loaded punch outs or light freestyle moves. 
+	
+						A lot of thought was put into the different assembly options. Our stock BNF will ship in the standard configuration but you can either do a pusher mod (flip the build upside down) or a lite mod (remove the protective plastic for weight optimization). 
+	
+						Durable plastic protectors with copper standoffs, portable compact design, easy accessable UBS port without disassembly, LED battery status, lost model buzzer and a universal GoPro TPU for a full size or naked GoPro. If you wanna go extra light, get one of our 5V balance plug GoPro power cables to get rid of the internal battery.
+						After our very popular 3inch Cinematic EVA bumper BumbleBee and Green Hornet CineWhoop series, we were trying to increase performance and reduce weight for an even better and longer flight experience for a wide variety of use. 
+	
+						Our all new																		 3.5inch project is finally ready for all you content creators or those guys who like to wear some protection every now and then. Prop protection is what we're talking about here... 
+	
+						ProTek is not necessarily just a Cinewhoop series but far more. Equipped with our all new 2205 motors for more power and less heat. We were able to increase speed and thrust by 50% compared to it's 3inch predecessor which gives a lot more room for a lot more fun. Our GPS measured maximum speed was above 120km/h and a maximum thrust of 750g per motor (3kg in total) would even carry heavier cams than a Gopro but also do some loaded punch outs or light freestyle moves. 
+	
+						A lot of thought was put into the different assembly options. Our stock BNF will ship in the standard configuration but you can either do a pusher mod (flip the build upside down) or a lite mod (remove the protective plastic for weight optimization). 
+	
+						Durable plastic protectors with copper standoffs, portable compact design, easy accessable UBS port without disassembly, LED battery status, lost model buzzer and a universal GoPro TPU for a full size or naked GoPro. If you wanna go extra light, get one of our 5V balance plug GoPro power cables to get rid of the internal battery.
+						After our very popular 3inch Cinematic EVA bumper BumbleBee and Green Hornet CineWhoop series, we were trying to increase performance and reduce weight for an even better and longer flight experience for a wide variety of use. 
+	
+						Our all new																		 3.5inch project is finally ready for all you content creators or those guys who like to wear some protection every now and then. Prop protection is what we're talking about here... 
+	
+						ProTek is not necessarily just a Cinewhoop series but far more. Equipped with our all new 2205 motors for more power and less heat. We were able to increase speed and thrust by 50% compared to it's 3inch predecessor which gives a lot more room for a lot more fun. Our GPS measured maximum speed was above 120km/h and a maximum thrust of 750g per motor (3kg in total) would even carry heavier cams than a Gopro but also do some loaded punch outs or light freestyle moves. 
+	
+						A lot of thought was put into the different assembly options. Our stock BNF will ship in the standard configuration but you can either do a pusher mod (flip the build upside down) or a lite mod (remove the protective plastic for weight optimization). 
+	
+						Durable plastic protectors with copper standoffs, portable compact design, easy accessable UBS port without disassembly, LED battery status, lost model buzzer and a universal GoPro TPU for a full size or naked GoPro. If you wanna go extra light, get one of our 5V balance plug GoPro power cables to get rid of the internal battery.
+					</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="specs-reviews">
+			<div class="header">
+				<div class="specs-title active" id="specs_title">
+					<h2>Specifications</h2>
+				</div>
+				<div class="line"></div>
+				<div class="reviews-title" id="reviews_title">
+					<h2>Reviews</h2>
+				</div>
+			</div>
+			<div class="reviews" id="reviews_sect">
+				<div class="reviews-inner" id="reviews_inner">
+					<div class="review">
+						<div class="title">
+							<h2>This drone is so cool!</h2>
+							<div class="star-rating">
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+							</div>
+						</div>
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione tempore modi, quae nam in quod minus alias ad aliquid earum quia dignissimos, cum pariatur quos suscipit illum placeat perspiciatis quas!
+						Necessitatibus corrupti nulla, autem ratione rem dolorum quis quaerat reprehenderit voluptatem sit velit corporis quisquam aliquid numquam, voluptatibus, nostrum placeat optio sed. Natus, soluta? Quae aliquid modi repudiandae at iste?
+						Blanditiis laboriosam quam excepturi possimus vero dolorum illo ducimus ipsum quidem incidunt. Aut, debitis aliquam. Fugiat eius soluta rem, ducimus ipsum, qui rerum officia vero maiores, similique explicabo non libero!</p>
+					</div>
+					<div class="review">
+						<div class="title">
+							<h2>This drone is so cool!</h2>
+							<div class="star-rating">
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+							</div>
+						</div>
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione tempore modi, quae nam in quod minus alias ad aliquid earum quia dignissimos, cum pariatur quos suscipit illum placeat perspiciatis quas!
+						Necessitatibus corrupti nulla, autem ratione rem dolorum quis quaerat reprehenderit voluptatem sit velit corporis quisquam aliquid numquam, voluptatibus, nostrum placeat optio sed. Natus, soluta? Quae aliquid modi repudiandae at iste?
+						Blanditiis laboriosam quam excepturi possimus vero dolorum illo ducimus ipsum quidem incidunt. Aut, debitis aliquam. Fugiat eius soluta rem, ducimus ipsum, qui rerum officia vero maiores, similique explicabo non libero!</p>
+					</div>
+					<div class="review">
+						<div class="title">
+							<h2>This drone is so cool!</h2>
+							<div class="star-rating">
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+							</div>
+						</div>
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione tempore modi, quae nam in quod minus alias ad aliquid earum quia dignissimos, cum pariatur quos suscipit illum placeat perspiciatis quas!
+						Necessitatibus corrupti nulla, autem ratione rem dolorum quis quaerat reprehenderit voluptatem sit velit corporis quisquam aliquid numquam, voluptatibus, nostrum placeat optio sed. Natus, soluta? Quae aliquid modi repudiandae at iste?
+						Blanditiis laboriosam quam excepturi possimus vero dolorum illo ducimus ipsum quidem incidunt. Aut, debitis aliquam. Fugiat eius soluta rem, ducimus ipsum, qui rerum officia vero maiores, similique explicabo non libero!</p>
+					</div>
+					<div class="review">
+						<div class="title">
+							<h2>This drone is so cool!</h2>
+							<div class="star-rating">
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+							</div>
+						</div>
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione tempore modi, quae nam in quod minus alias ad aliquid earum quia dignissimos, cum pariatur quos suscipit illum placeat perspiciatis quas!
+						Necessitatibus corrupti nulla, autem ratione rem dolorum quis quaerat reprehenderit voluptatem sit velit corporis quisquam aliquid numquam, voluptatibus, nostrum placeat optio sed. Natus, soluta? Quae aliquid modi repudiandae at iste?
+						Blanditiis laboriosam quam excepturi possimus vero dolorum illo ducimus ipsum quidem incidunt. Aut, debitis aliquam. Fugiat eius soluta rem, ducimus ipsum, qui rerum officia vero maiores, similique explicabo non libero!</p>
+					</div>
+				</div>
+			</div>
+			<div class="specs" id="specs_sect">
+				<div class="specs-inner" id="specs_inner">
+					<p>
+						Lorem ipsum dolor, sit amet consectetur adipisicing elit. Necessitatibus facilis error nemo, blanditiis velit laudantium consectetur recusandae. Animi voluptates deserunt aspernatur quae aut! Totam soluta veritatis saepe, quas non excepturi!
+						Tenetur deleniti, suscipit nulla optio recusandae perferendis. A alias, esse cupiditate exercitationem deleniti recusandae harum. Perspiciatis rerum voluptatum voluptate assumenda impedit, aliquam perferendis recusandae, deleniti esse maxime, at inventore ea.
+						Quod similique esse laudantium suscipit quaerat pariatur quos provident, tempore doloribus cumque, consequuntur nisi eveniet totam animi reiciendis molestiae alias dolor quisquam recusandae atque. Molestiae illum cupiditate inventore neque fugit?
+					</p>
+				</div>
+			</div>
+		</div>
+
+		<footer class="footer">
+			<div class="top">
+				<h2>Sign Up For Funcy News!</h2>
+				<p>Join our email list to get updates on new products, product tutorials, and product stories :D</p>
+				<div id="footer_newsletter_image" class="newsletter-image">
+
+				</div>
+				<a href="" class="button">Sign Up!</a>
+			</div>
+
+			<div class="bottom">
+				<div class="column">
+					<a href="">
+						<h2>Support</h2>
+					</a>
+					<a href="">Returns</a>
+					<a href="">Order Tracking</a>
+					<a href="">Shipping</a>
+					<a href="">Support Ticket</a>
+				</div>
+				<div class="column">
+					<a href="">
+						<h2>Blog</h2>
+					</a>
+					<a href="">Instructional</a>
+					<a href="">Product Uses</a>
+					<a href="">Latest Posts</a>
+				</div>
+				<div class="column">
+					<a href="">
+						<h2>About</h2>
+					</a>
+					<a href="">About Us</a>
+					<a href="">Mission Statement</a>
+					<a href="">Customer Reviews</a>
+				</div>
+				<div class="column">
+					<a href="">
+						<h2>Contact</h2>
+					</a>
+					<a href="">Email</a>
+					<a href="">Phone</a>
+					<a href="">Contact Form</a>
+				</div>
+			</div>
+		</footer>
+
+		<script src="./js/single_product.js"></script>
+
+		<script src="https://kit.fontawesome.com/aebdbe8212.js" crossorigin="anonymous"></script>
+	</body>
+</html>

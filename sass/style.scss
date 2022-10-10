@@ -1,5 +1,9 @@
 @use "./components/nav";
-@use "./components/marketplace";
+
+@use "./components/marketplace-home";
+@use "./pages/single-product";
+
+@use "./components/footer";
 
 @import url('https://fonts.googleapis.com/css2?family=Kotta+One&display=swap');
 
@@ -7,4 +11,9 @@
 	margin: 0;
 	padding: 0;
 	font-family: 'Kotta One', serif;
+}
+
+.spacer{
+
+	height: 100vh;
 }
